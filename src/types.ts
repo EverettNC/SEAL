@@ -58,8 +58,8 @@ export type Being = {
   som: BottomsUp;
   somHow: string;
   comparable?: {
-    lowMonthly: number;
-    highMonthly: number;
+    low: number;
+    high: number;
     unit: string;
     note: string;
   };

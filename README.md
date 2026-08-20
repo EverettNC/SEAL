@@ -42,3 +42,5 @@ Seats at `http://localhost:7172`.
 AlphaWolf SOM **$240.0M** is 100,000 homes × $2,400/year — not a street TAM. The old $48.0B TAM is not spoken here. It had no source that survives a partner meeting.
 
 Inferno comparable is **$22,000–$28,000/month** for lesser work, and **$20,000–$40,000 per 30-day stay** in private veteran treatment centers. Inferno is not a bed. Seated price is **$2,200/month**. SOM is 8,000 supervised seats × $26,400 = **$211.2M**.
+
+AlphaVox comparable is **$8,000–$12,000 one-time for a static symbol board**. Dedicated SGDs print $3,000–$15,000. AlphaVox is the board plus the engine. Seated year-1 is **$6,400** (haircut off the $8,000 low). SOM is 15,000 boards × $6,400 = **$96.0M**.

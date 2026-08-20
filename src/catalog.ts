@@ -40,22 +40,29 @@ export const BEINGS: Being[] = [
     whyThisRound:
       "First 200 boards. Thirty-six hours offline as a design requirement. Family IP already on file.",
     problem:
-      "Most AAC still makes the person adapt to the board. Cloud TTS fails in a dead zone. Families get priced out of a voice.",
+      "Most AAC still makes the person adapt to the board. Cloud TTS fails in a dead zone. Families get priced out of a voice. A static symbol board already bills $8,000–$12,000.",
     solution:
-      "A board that adapts to the person. Offline TTS. Memory mesh that learns who it is serving, not just what was typed.",
+      "A board that adapts to the person. Offline TTS. Memory mesh that learns who it is serving, not just what was typed. More than symbols. Less than the $12,000 sticker.",
     tamRaw: 1_300_000_000,
     tamHow:
       "AAC devices, low published print $1.3B (2025, Business Research Insights). High print $3.4B (Dataintelo) is refused. Haircut then applied.",
     sam: 208_000_000,
     samHow:
       "20% of the already-cut TAM. US + clinic channel we can actually sell a board into this decade. Not every speech-therapy dollar on earth.",
-    som: { units: 15_000, unitLabel: "boards", arpu: 3600, window: "5-year reachable" },
+    som: { units: 15_000, unitLabel: "boards", arpu: 6_400, window: "5-year reachable" },
     somHow:
-      "15,000 boards × $3,600/year license (device + local software). Comparable AAC hardware often lists $5k–$15k; we price under that on purpose.",
+      "15,000 boards × $6,400 = $96.0M. $6,400 is the $8,000 low comparable with the house haircut. Year-1 against a one-time $8k–$12k static board. We do not take $12,000.",
+    comparable: {
+      low: 8_000,
+      high: 12_000,
+      unit: "one-time, symbol board only",
+      note: "Dedicated SGDs print $3,000–$15,000 (2026 SLP guide). Tobii-class boards list in that band. $8,000–$12,000 is what the house has already run for symbols alone. AlphaVox is the board plus the engine. Seated year-1: $6,400.",
+    },
     refuse: [
       "The $3.4B high AAC print.",
       "Autism TAM, speech-therapy TAM, or 'disability tech' wads.",
       "Any claim that 200 boards are already shipped. This round funds them.",
+      "The $12,000 sticker for a static board as our price. Worth is not the same as what we will charge.",
     ],
     useOfFunds: FUNDS_FIELD("200 boards, clinic onboarding, 36-hour offline soak."),
     risks: [
@@ -73,11 +80,11 @@ export const BEINGS: Being[] = [
       dossier:
         "Local-first AAC. Adaptive input. Multi-voice TTS. Clinical memory mesh. Covered by TCAP-2026-001.",
       thesis: "Every stim is language. Presence that does not expire when the tower does.",
-      math: "Low AAC print $1.3B → TAM $1.04B after haircut. SOM is 15,000 boards × $3,600 = $54.0M.",
+      math: "Low AAC print $1.3B → TAM $1.04B. Comparable $8k–$12k for symbols alone. We seat $6,400. SOM 15,000 × $6,400 = $96.0M.",
       ask: "$1.8M seed. 200 boards. IP conversion. Not a percent of SOM.",
       close: "Field. Patent pending. One LLC. Stamp only if the units hold.",
     },
-    citations: ["bri-aac-2025", "dataintelo-aac-2025", "tcap-site"],
+    citations: ["bri-aac-2025", "dataintelo-aac-2025", "sgd-prices-2026", "tcap-site"],
   },
   {
     id: "alphawolf",
@@ -193,8 +200,8 @@ export const BEINGS: Being[] = [
     somHow:
       "8,000 clinician-supervised seats × $2,200/month ($26,400/year) = $211.2M. Price is one-tenth of the low comparable on purpose. We are not a bed.",
     comparable: {
-      lowMonthly: 22_000,
-      highMonthly: 28_000,
+      low: 22_000,
+      high: 28_000,
       unit: "month, lesser products the house has already run",
       note: "Private veteran / PTSD residential stays print $20,000–$40,000 for 30 days (Veterans Families United). Inferno is 3 a.m. presence, not a facility. We will not take the bed rate. Seated seat: $2,200/month.",
     },

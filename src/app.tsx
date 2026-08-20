@@ -555,8 +555,8 @@ function BeingPage({
             <span className="block text-xs uppercase tracking-widest text-faint">
               Comparable — not our price
             </span>
-            ${being.comparable.lowMonthly.toLocaleString()}–$
-            {being.comparable.highMonthly.toLocaleString()} / {being.comparable.unit}.{" "}
+            ${being.comparable.low.toLocaleString()}–$
+            {being.comparable.high.toLocaleString()} / {being.comparable.unit}.{" "}
             {being.comparable.note}
           </Note>
         </div>
@@ -773,8 +773,8 @@ function Closer({
                     <span className="block text-xs uppercase tracking-widest text-faint">
                       Comparable — not our price
                     </span>
-                    ${current.comparable.lowMonthly.toLocaleString()}–$
-                    {current.comparable.highMonthly.toLocaleString()} / {current.comparable.unit}.{" "}
+                    ${current.comparable.low.toLocaleString()}–$
+                    {current.comparable.high.toLocaleString()} / {current.comparable.unit}.{" "}
                     {current.comparable.note}
                   </Note>
                 </div>

@@ -47,6 +47,15 @@ export const SOURCES: Citation[] = [
     usedFor: "High print $3.4B (2025). Shown so a partner can see we refused the top of the range.",
   },
   {
+    id: "sgd-prices-2026",
+    title: "10 Best AAC Devices for Speech Therapy (2026 SLP Guide)",
+    publisher: "Speech Pathology Graduate Programs",
+    year: "2026",
+    url: "https://www.speechpathologygraduateprograms.org/blog/top-10-aac-augmentative-and-alternative-communication-devices/",
+    usedFor:
+      "Dedicated speech-generating devices $3,000–$15,000. Tobii-class boards listed $3,000–$8,000. AlphaVox comparable band; house already runs $8,000–$12,000 for a static symbol board.",
+  },
+  {
     id: "precedence-ptsd-2025",
     title: "PTSD Treatment Market",
     publisher: "Precedence Research",
