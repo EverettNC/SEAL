@@ -55,6 +55,15 @@ export const SOURCES: Citation[] = [
     usedFor: "PTSD treatment market $2.37B in 2025. Inferno category. Not the $19B wad.",
   },
   {
+    id: "vfu-residential",
+    title: "Treatment Centers",
+    publisher: "Veterans Families United",
+    year: "n.d.",
+    url: "https://veteransfamiliesunited.org/treatment-centers/",
+    usedFor:
+      "Private PTSD / veteran treatment centers $20,000–$40,000 for a 30-day stay. Inferno comparable — a bed, not our product. We refuse that rate.",
+  },
+  {
     id: "dataintelo-companion-2025",
     title: "Elder Companion Volunteer App Market",
     publisher: "Dataintelo",

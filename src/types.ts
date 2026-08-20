@@ -57,6 +57,12 @@ export type Being = {
   samHow: string;
   som: BottomsUp;
   somHow: string;
+  comparable?: {
+    lowMonthly: number;
+    highMonthly: number;
+    unit: string;
+    note: string;
+  };
   refuse: string[];
   useOfFunds: FundLine[];
   risks: string[];

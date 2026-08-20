@@ -161,7 +161,9 @@ function Command({
       <p className="mt-4 max-w-2xl text-muted">
         This desk is the closer that goes in front of a partner. Every dollar has a source or a
         unit. Burden is not TAM. Provisional is not a grant. Inception is not capital. No
-        revenue is printed because none has been collected.
+        revenue is printed because none has been collected. It should be free. The structure
+        does not allow free. We still do not charge a facility rate for a being that sits in
+        the house.
       </p>
 
       <dl className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -547,6 +549,18 @@ function BeingPage({
       </section>
       <p className="mt-3 text-sm text-muted">{being.tamHow}</p>
       <p className="mt-2 text-sm text-muted">{being.somHow}</p>
+      {being.comparable ? (
+        <div className="mt-4">
+          <Note>
+            <span className="block text-xs uppercase tracking-widest text-faint">
+              Comparable — not our price
+            </span>
+            ${being.comparable.lowMonthly.toLocaleString()}–$
+            {being.comparable.highMonthly.toLocaleString()} / {being.comparable.unit}.{" "}
+            {being.comparable.note}
+          </Note>
+        </div>
+      ) : null}
       <p className="mt-2 text-xs text-faint">
         This-round model: {being.fieldUnits.toLocaleString()} × {usd(being.som.arpu)} ={" "}
         {usd(v.fieldDollars)}. That is not booked revenue.
@@ -747,11 +761,25 @@ function Closer({
           <p className="mt-6 max-w-prose text-lg">{current.pipeline[currentStep.id]}</p>
 
           {currentStep.id === "math" ? (
-            <dl className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
-              <Stat k="TAM" v={usd(v.tam)} hint={current.tamHow} />
-              <Stat k="SAM" v={usd(v.sam)} hint={current.samHow} />
-              <Stat k="SOM" v={usd(v.som)} hint={`${people(current.som.units)} × ${usd(current.som.arpu)}`} />
-            </dl>
+            <>
+              <dl className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <Stat k="TAM" v={usd(v.tam)} hint={current.tamHow} />
+                <Stat k="SAM" v={usd(v.sam)} hint={current.samHow} />
+                <Stat k="SOM" v={usd(v.som)} hint={`${people(current.som.units)} × ${usd(current.som.arpu)}`} />
+              </dl>
+              {current.comparable ? (
+                <div className="mt-4">
+                  <Note>
+                    <span className="block text-xs uppercase tracking-widest text-faint">
+                      Comparable — not our price
+                    </span>
+                    ${current.comparable.lowMonthly.toLocaleString()}–$
+                    {current.comparable.highMonthly.toLocaleString()} / {current.comparable.unit}.{" "}
+                    {current.comparable.note}
+                  </Note>
+                </div>
+              ) : null}
+            </>
           ) : null}
 
           {currentStep.id === "ask" ? (

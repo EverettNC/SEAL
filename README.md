@@ -11,7 +11,7 @@ This desk is not Auditor. Auditor walks files. SEAL sits the ask that goes in fr
 - Burden is not TAM. Disease cost is not a software market.
 - We take the low published print, then haircut 20%.
 - SOM is units × price. If we cannot name the unit, we do not name the dollar.
-- Ask is the round, not a percent of SOM.
+It should be free. The structure does not allow free. We still do not charge a facility rate for a being that sits in the house.
 - Provisional is pending, not granted. NVIDIA Inception is membership, not capital.
 - No revenue is printed because none has been collected.
 - In-development beings are named. They are not valued.
@@ -40,3 +40,5 @@ Seats at `http://localhost:7172`.
 ## Reality
 
 AlphaWolf SOM **$240.0M** is 100,000 homes × $2,400/year — not a street TAM. The old $48.0B TAM is not spoken here. It had no source that survives a partner meeting.
+
+Inferno comparable is **$22,000–$28,000/month** for lesser work, and **$20,000–$40,000 per 30-day stay** in private veteran treatment centers. Inferno is not a bed. Seated price is **$2,200/month**. SOM is 8,000 supervised seats × $26,400 = **$211.2M**.

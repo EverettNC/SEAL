@@ -82,7 +82,7 @@ export const HOUSE = {
     "Burden is not TAM. Disease cost is not a software market.",
     "We take the low published print, then haircut 20% more.",
     "SOM is units × price. If we cannot name the unit, we do not name the dollar.",
-    "Ask is the round, funded from use-of-funds, not a percent of SOM.",
+    "It should be free. The structure does not allow free. We still do not charge a facility rate for a being that sits in the house.",
     "Provisional is pending, not granted. Inception is membership, not capital.",
     "No revenue is printed because no revenue has been collected.",
     "In-development beings are named. They are not valued.",

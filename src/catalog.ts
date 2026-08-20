@@ -181,20 +181,28 @@ export const BEINGS: Being[] = [
     whyThisRound:
       "First 40 clinician-supervised seats. Safety plan always reachable. No processing without consent.",
     problem:
-      "PTSD treatment exists. Access does not, at 3 a.m., for people who will not call. A chatbot with a disclaimer is not presence.",
+      "PTSD treatment exists. Access does not, at 3 a.m., for people who will not call. A chatbot with a disclaimer is not presence. Lesser products still bill $22,000–$28,000 a month.",
     solution:
-      "Grounding first. Clinician in the loop. Crisis routes always on. Local-first so a blackout does not drop the safety plan.",
+      "Grounding first. Clinician in the loop. Crisis routes always on. Local-first so a blackout does not drop the safety plan. Presence, not a 30-day bed.",
     tamRaw: 2_370_000_000,
     tamHow:
       "PTSD treatment market $2.37B (2025, Precedence). Haircut → TAM $1.90B. The $19B 'PTSD market' wad is refused.",
     sam: 379_200_000,
     samHow: "20% of already-cut TAM. Veteran + civilian PTSD we can seat with a clinician, this decade.",
-    som: { units: 20_000, unitLabel: "people", arpu: 1200, window: "5-year reachable" },
-    somHow: "20,000 people × $1,200/year supervised seat = $24.0M.",
+    som: { units: 8_000, unitLabel: "supervised seats", arpu: 26_400, window: "5-year reachable" },
+    somHow:
+      "8,000 clinician-supervised seats × $2,200/month ($26,400/year) = $211.2M. Price is one-tenth of the low comparable on purpose. We are not a bed.",
+    comparable: {
+      lowMonthly: 22_000,
+      highMonthly: 28_000,
+      unit: "month, lesser products the house has already run",
+      note: "Private veteran / PTSD residential stays print $20,000–$40,000 for 30 days (Veterans Families United). Inferno is 3 a.m. presence, not a facility. We will not take the bed rate. Seated seat: $2,200/month.",
+    },
     refuse: [
       "The $19B PTSD market print.",
       "Using veteran suicide counts as TAM. That is a human fact. It is not a dollar.",
       "Unsupervised therapy claims. This round is clinician-supervised.",
+      "The $22,000–$28,000/month bed as our price. Worth is not the same as what we will charge.",
     ],
     useOfFunds: FUNDS_FIELD("40 clinician-supervised seats. Safety plan always reachable."),
     risks: [
@@ -212,11 +220,11 @@ export const BEINGS: Being[] = [
       dossier:
         "Safety before processing. CPT/PE/EMDR/DBT as the clinical map. 988/741741 always on. TCAP-2026-001.",
       thesis: "Presence, not a chatbot with a crisis disclaimer.",
-      math: "PTSD treatment $2.37B → TAM $1.90B. SOM 20,000 × $1,200 = $24.0M.",
-      ask: "$2.0M seed. 40 clinician-supervised seats.",
+      math: "PTSD treatment $2.37B → TAM $1.90B. Comparable $22k–$28k/month. We seat $2,200/month. SOM 8,000 × $26,400 = $211.2M.",
+      ask: "$2.0M seed. 40 clinician-supervised seats. Not the bed rate.",
       close: "Field. Patent pending. Stamp only if the safety law holds.",
     },
-    citations: ["precedence-ptsd-2025", "tcap-site"],
+    citations: ["precedence-ptsd-2025", "vfu-residential", "tcap-site"],
   },
   {
     id: "brockston",
