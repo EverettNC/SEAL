@@ -1,4 +1,4 @@
-export type Stage = "LAB" | "FIELD" | "ASK" | "CLOSED";
+export type Stage = "LAB" | "FIELD";
 
 export type PipelineStepId =
   | "intake"
@@ -8,22 +8,62 @@ export type PipelineStepId =
   | "ask"
   | "close";
 
+export type Citation = {
+  id: string;
+  title: string;
+  publisher: string;
+  year: string;
+  url: string;
+  usedFor: string;
+};
+
+export type FundLine = {
+  label: string;
+  pct: number;
+  note: string;
+};
+
+export type BottomsUp = {
+  units: number;
+  unitLabel: string;
+  arpu: number;
+  window: string;
+};
+
 export type Being = {
   id: string;
   mark: string;
   name: string;
+  legalLine: string;
   tag: string;
   line: string;
   stage: Stage;
-  patent: string;
-  /** Headline TAM before the conservative haircut. */
-  tamRaw: number;
-  ask: number;
   round: string;
+  ask: number;
+  fieldUnits: number;
+  fieldLabel: string;
   color: string;
+  coveredInvention: string;
+  architecture: string[];
+  safety: string[];
   thesis: string;
   whyThisRound: string;
+  problem: string;
+  solution: string;
+  /** Sourced category or unit-ceiling we haircut. Not societal burden. */
+  tamRaw: number;
+  tamHow: string;
+  sam: number;
+  samHow: string;
+  som: BottomsUp;
+  somHow: string;
+  refuse: string[];
+  useOfFunds: FundLine[];
+  risks: string[];
+  built: string[];
+  notYet: string[];
   pipeline: Record<PipelineStepId, string>;
+  citations: string[];
 };
 
 export type Valuation = {
@@ -33,6 +73,5 @@ export type Valuation = {
   som: number;
   ask: number;
   haircut: number;
-  samShare: number;
-  somShare: number;
+  fieldDollars: number;
 };

@@ -1,25 +1,22 @@
+import { HAIRCUT } from "./catalog";
 import type { Being, Valuation } from "./types";
 
-/** Twenty percent off the headline TAM. We do not sell the top of the range. */
-export const HAIRCUT = 0.8;
-/** Serviceable slice of the already-cut TAM. */
-export const SAM_SHARE = 0.2;
-/** Reachable slice of SAM in the window of this round. */
-export const SOM_SHARE = 0.025;
+export { HAIRCUT };
+
+export function somOf(being: Being): number {
+  return being.som.units * being.som.arpu;
+}
 
 export function value(being: Being): Valuation {
   const tam = being.tamRaw * HAIRCUT;
-  const sam = tam * SAM_SHARE;
-  const som = sam * SOM_SHARE;
   return {
     tamRaw: being.tamRaw,
     tam,
-    sam,
-    som,
+    sam: being.sam,
+    som: somOf(being),
     ask: being.ask,
     haircut: HAIRCUT,
-    samShare: SAM_SHARE,
-    somShare: SOM_SHARE,
+    fieldDollars: being.fieldUnits * being.som.arpu,
   };
 }
 
@@ -34,8 +31,7 @@ export function valueAll(beings: Being[]): Valuation {
         som: acc.som + v.som,
         ask: acc.ask + v.ask,
         haircut: HAIRCUT,
-        samShare: SAM_SHARE,
-        somShare: SOM_SHARE,
+        fieldDollars: acc.fieldDollars + v.fieldDollars,
       };
     },
     {
@@ -45,8 +41,7 @@ export function valueAll(beings: Being[]): Valuation {
       som: 0,
       ask: 0,
       haircut: HAIRCUT,
-      samShare: SAM_SHARE,
-      somShare: SOM_SHARE,
+      fieldDollars: 0,
     } satisfies Valuation,
   );
 }
