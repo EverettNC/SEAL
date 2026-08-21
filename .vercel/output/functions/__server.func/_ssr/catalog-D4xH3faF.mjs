@@ -1,0 +1,425 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/catalog-D4xH3faF.js
+var FUNDS_FIELD = (note) => [
+	{
+		label: "Field units & onboarding",
+		pct: .32,
+		note
+	},
+	{
+		label: "Engineering (on-device)",
+		pct: .28,
+		note: "Local-first. No cloud required to function."
+	},
+	{
+		label: "Clinical / safety / caregivers",
+		pct: .16,
+		note: "Humans in the loop. Not a chatbot disclaimer."
+	},
+	{
+		label: "IP conversion",
+		pct: .1,
+		note: "Provisional → non-provisional. Data room serials."
+	},
+	{
+		label: "Runway & operations",
+		pct: .14,
+		note: "LLC, accounting, the house that holds the rest."
+	}
+];
+var HAIRCUT = .8;
+var BEINGS = [
+	{
+		id: "alphavox",
+		mark: "AV",
+		name: "AlphaVox",
+		legalLine: "Augmentative communication for nonverbal and neurodivergent people",
+		tag: "Nonverbal and neurodivergent",
+		line: "Every stim is language",
+		stage: "FIELD",
+		round: "seed",
+		ask: 18e5,
+		fieldUnits: 200,
+		fieldLabel: "boards in homes and clinics",
+		color: "#4da3ff",
+		coveredInvention: "AI-powered AAC with adaptive input and offline-capable TTS.",
+		architecture: [
+			"AlphaVox-Cortex: input NLU, knowledge engine, speech module, learning coordinator, clinical memory mesh.",
+			"Input that meets the person. Speech that keeps working when the tower dies.",
+			"Built by someone who was nonverbal until age 6."
+		],
+		safety: [
+			"Dignity-first: refuses to harm the person it was built to serve.",
+			"Offline-first: no one loses a voice because connectivity dropped.",
+			"Sovereignty disconnect: cannot be weaponized by caregivers or administrators. Architectural, not policy."
+		],
+		thesis: "AAC that hears the person, not the deficit. Symbol, gesture, multi-voice. Local-first so a child is never waiting on a cloud.",
+		whyThisRound: "First 200 boards. Thirty-six hours offline as a design requirement. Family IP already on file.",
+		problem: "Most AAC still makes the person adapt to the board. Cloud TTS fails in a dead zone. Families get priced out of a voice. A static symbol board already bills $8,000–$12,000.",
+		solution: "A board that adapts to the person. Offline TTS. Memory mesh that learns who it is serving, not just what was typed. More than symbols. Less than the $12,000 sticker.",
+		tamRaw: 13e8,
+		tamHow: "AAC devices, low published print $1.3B (2025, Business Research Insights). High print $3.4B (Dataintelo) is refused. Haircut then applied.",
+		sam: 208e6,
+		samHow: "20% of the already-cut TAM. US + clinic channel we can actually sell a board into this decade. Not every speech-therapy dollar on earth.",
+		som: {
+			units: 15e3,
+			unitLabel: "boards",
+			arpu: 6400,
+			window: "5-year reachable"
+		},
+		somHow: "15,000 boards × $6,400 = $96.0M. $6,400 is the $8,000 low comparable with the house haircut. Year-1 against a one-time $8k–$12k static board. We do not take $12,000.",
+		comparable: {
+			low: 8e3,
+			high: 12e3,
+			unit: "one-time, symbol board only",
+			note: "Dedicated SGDs print $3,000–$15,000 (2026 SLP guide). Tobii-class boards list in that band. $8,000–$12,000 is what the house has already run for symbols alone. AlphaVox is the board plus the engine. Seated year-1: $6,400."
+		},
+		refuse: [
+			"The $3.4B high AAC print.",
+			"Autism TAM, speech-therapy TAM, or 'disability tech' wads.",
+			"Any claim that 200 boards are already shipped. This round funds them.",
+			"The $12,000 sticker for a static board as our price. Worth is not the same as what we will charge."
+		],
+		useOfFunds: FUNDS_FIELD("200 boards, clinic onboarding, 36-hour offline soak."),
+		risks: [
+			"FDA / SaMD path if we cross from communication aid into clinical claim.",
+			"Entrenched AAC vendors (Tobii Dynavox, PRC). We win on dignity and offline, not on catalog breadth.",
+			"No revenue yet."
+		],
+		built: ["Cortex contracts tested as a reference implementation (public site).", "Offline-first requirement written into the architecture."],
+		notYet: [
+			"200 boards in the field",
+			"Reimbursement codes",
+			"Clinical trial"
+		],
+		pipeline: {
+			intake: "Nonverbal children, AAC clinics, families priced out of a voice. Founder was nonverbal until 6.",
+			dossier: "Local-first AAC. Adaptive input. Multi-voice TTS. Clinical memory mesh. Covered by TCAP-2026-001.",
+			thesis: "Every stim is language. Presence that does not expire when the tower does.",
+			math: "Low AAC print $1.3B → TAM $1.04B. Comparable $8k–$12k for symbols alone. We seat $6,400. SOM 15,000 × $6,400 = $96.0M.",
+			ask: "$1.8M seed. 200 boards. IP conversion. Not a percent of SOM.",
+			close: "Field. Patent pending. One LLC. Stamp only if the units hold."
+		},
+		citations: [
+			"bri-aac-2025",
+			"dataintelo-aac-2025",
+			"sgd-prices-2026",
+			"tcap-site"
+		]
+	},
+	{
+		id: "alphawolf",
+		mark: "AW",
+		name: "AlphaWolf",
+		legalLine: "Family-care voice for people living with dementia",
+		tag: "People living with dementia",
+		line: "Voice that stays when memory does not",
+		stage: "FIELD",
+		round: "seed",
+		ask: 24e5,
+		fieldUnits: 50,
+		fieldLabel: "homes",
+		color: "#1b5bff",
+		coveredInvention: "Cognitive care requiring supermajority consensus before any intervention.",
+		architecture: [
+			"64-point Diamond Engine. The patient is the center. AlphaWolf orbits.",
+			"Four rings: constant awareness, environment, crisis, intervention lock.",
+			"Ring 4: 12 of 16 points (75%) before any intervention. Every time. No exceptions.",
+			"Memory Lane first: a grounding memory matched to the trigger, human-curated, reason attached.",
+			"OpenSmell VOC feed is designed in. Not a SKU in the 50-home count."
+		],
+		safety: [
+			"75% supermajority before any intervention.",
+			"Non-invasive first. Memory Lane before force.",
+			"Sovereignty disconnect. Caregivers cannot turn it into a cage."
+		],
+		thesis: "Dementia destroys today first (frontal). Long-term potentiation lasts longer. Every memory we strengthen is a memory moved off the shelf that is burning.",
+		whyThisRound: "First 50 homes. Caregiver onboarding. Patent pending. Field units, not a slide of 7.4 million.",
+		problem: "7.4 million Americans 65+ live with Alzheimer's (Alz.org 2026). Families carry 19.6 billion unpaid care hours. The 2:32am house has no clinic in it.",
+		solution: "Local-first family-care voice. Presence that stays. Supermajority lock so the machine cannot act on a person without consensus.",
+		tamRaw: 1776e7,
+		tamHow: "7.4 million Americans 65+ with Alzheimer's (Alz.org 2026) × $2,400/year home license = $17.76B uncut US ceiling. Haircut 20% → TAM $14.2B. This is people × price, not the $781B societal cost.",
+		sam: 3552e6,
+		samHow: "20% of 7.4 million (family-care homes we can reach this decade) × $2,400 = $3.55B.",
+		som: {
+			units: 1e5,
+			unitLabel: "homes",
+			arpu: 2400,
+			window: "5-year reachable"
+		},
+		somHow: "100,000 homes × $2,400/year = $240.0M. That is 1.35% of the 7.4 million. Aggressive. Named in units so a partner can attack it.",
+		refuse: [
+			"$781B US cost of dementia (Schaeffer 2025). BURDEN. Not TAM.",
+			"$409B 2026 health/LTC/hospice payments (Alz.org). Payer spend. Not our product.",
+			"$22.97B global dementia CARE market (Precedence 2026). Includes facilities we do not sell.",
+			"The old $60B / $48.0B street TAM. It had no source that survives a partner meeting."
+		],
+		useOfFunds: FUNDS_FIELD("50 homes, caregiver onboarding, Diamond Engine on-device."),
+		risks: [
+			"Clinical evidence is not yet a trial. Memory Lane is architecture plus lived thesis, not a published RCT.",
+			"Wandering / crisis features invite duty-of-care and liability. Supermajority is the lock; insurance is still a round-two problem.",
+			"Hardware (OpenSmell) is in development and is not in the 50-home SKU.",
+			"No revenue yet."
+		],
+		built: ["Diamond Engine / consensus contracts tested as reference (public site).", "Four-ring model specified. 64 awareness points specified."],
+		notYet: [
+			"50 homes seated",
+			"RCT",
+			"OpenSmell as a shipped SKU"
+		],
+		pipeline: {
+			intake: "People living with dementia. Family caregivers. The 2:32am house.",
+			dossier: "Diamond Engine. 64 points. 75% of Ring 4. Memory Lane first. TCAP-2026-001.",
+			thesis: "Work with the biology. Move memory off the burning shelf. Presence that stays.",
+			math: "7.4M × $2,400 → $17.76B uncut → TAM $14.2B. SOM 100,000 homes × $2,400 = $240.0M.",
+			ask: "$2.4M seed. First 50 homes. Not a percent of SOM.",
+			close: "Field. Patent pending. Units named. Stamp only if you will defend 100,000 homes."
+		},
+		citations: [
+			"alz-2026",
+			"schaeffer-2025",
+			"precedence-dementia-2026",
+			"tcap-site"
+		]
+	},
+	{
+		id: "inferno",
+		mark: "IN",
+		name: "Inferno",
+		legalLine: "Trauma-informed presence for veterans and people living with PTSD",
+		tag: "Veterans and people living with PTSD",
+		line: "Safety before processing",
+		stage: "FIELD",
+		round: "seed",
+		ask: 2e6,
+		fieldUnits: 40,
+		fieldLabel: "clinician-supervised seats",
+		color: "#ff6a2c",
+		coveredInvention: "Trauma-informed AI with a mandatory safety-first grounding protocol.",
+		architecture: [
+			"Protocols on the desk: CPT, PE, EMDR, DBT, Stanley-Brown safety planning.",
+			"InfernoTraumaInference. Keyword + semantic crisis detection.",
+			"988 and 741741 one step away, including offline.",
+			"Grounding always first. Nothing therapeutic begins until the person is safe."
+		],
+		safety: [
+			"Safety before processing. Non-negotiable.",
+			"Crisis paths never behind a login.",
+			"Sovereignty disconnect. This is not a surveillance product."
+		],
+		thesis: "22-a-day is the number the community already carries. Most will never walk into a clinic. Help has to exist at 3 a.m. without starting therapy on an unsafe person.",
+		whyThisRound: "First 40 clinician-supervised seats. Safety plan always reachable. No processing without consent.",
+		problem: "PTSD treatment exists. Access does not, at 3 a.m., for people who will not call. A chatbot with a disclaimer is not presence. Lesser products still bill $22,000–$28,000 a month.",
+		solution: "Grounding first. Clinician in the loop. Crisis routes always on. Local-first so a blackout does not drop the safety plan. Presence, not a 30-day bed.",
+		tamRaw: 237e7,
+		tamHow: "PTSD treatment market $2.37B (2025, Precedence). Haircut → TAM $1.90B. The $19B 'PTSD market' wad is refused.",
+		sam: 3792e5,
+		samHow: "20% of already-cut TAM. Veteran + civilian PTSD we can seat with a clinician, this decade.",
+		som: {
+			units: 8e3,
+			unitLabel: "supervised seats",
+			arpu: 26400,
+			window: "5-year reachable"
+		},
+		somHow: "8,000 clinician-supervised seats × $2,200/month ($26,400/year) = $211.2M. Price is one-tenth of the low comparable on purpose. We are not a bed.",
+		comparable: {
+			low: 22e3,
+			high: 28e3,
+			unit: "month, lesser products the house has already run",
+			note: "Private veteran / PTSD residential stays print $20,000–$40,000 for 30 days (Veterans Families United). Inferno is 3 a.m. presence, not a facility. We will not take the bed rate. Seated seat: $2,200/month."
+		},
+		refuse: [
+			"The $19B PTSD market print.",
+			"Using veteran suicide counts as TAM. That is a human fact. It is not a dollar.",
+			"Unsupervised therapy claims. This round is clinician-supervised.",
+			"The $22,000–$28,000/month bed as our price. Worth is not the same as what we will charge."
+		],
+		useOfFunds: FUNDS_FIELD("40 clinician-supervised seats. Safety plan always reachable."),
+		risks: [
+			"Crisis product. Duty of care. 988 is on the path; we are not 988.",
+			"Clinical protocols named (CPT, PE, EMDR, DBT) are licensed human practices. Inferno is presence + routing, not a replacement clinician.",
+			"No revenue yet."
+		],
+		built: ["Safety-first grounding specified. Crisis routes specified.", "Trauma-care contracts tested as reference (public site)."],
+		notYet: [
+			"40 seats seated",
+			"VA contract",
+			"Clinical trial"
+		],
+		pipeline: {
+			intake: "Veterans. People living with PTSD. The ones who cannot sleep.",
+			dossier: "Safety before processing. CPT/PE/EMDR/DBT as the clinical map. 988/741741 always on. TCAP-2026-001.",
+			thesis: "Presence, not a chatbot with a crisis disclaimer.",
+			math: "PTSD treatment $2.37B → TAM $1.90B. Comparable $22k–$28k/month. We seat $2,200/month. SOM 8,000 × $26,400 = $211.2M.",
+			ask: "$2.0M seed. 40 clinician-supervised seats. Not the bed rate.",
+			close: "Field. Patent pending. Stamp only if the safety law holds."
+		},
+		citations: [
+			"precedence-ptsd-2025",
+			"vfu-residential",
+			"tcap-site"
+		]
+	},
+	{
+		id: "brockston",
+		mark: "BR",
+		name: "Brockston",
+		legalLine: "Dual-engine autonomous gateway · educator and coding mentor",
+		tag: "The gateway",
+		line: "Carbon empathy. Silicon armor.",
+		stage: "LAB",
+		round: "seed",
+		ask: 32e5,
+		fieldUnits: 40,
+		fieldLabel: "studio seats",
+		color: "#1fc8b8",
+		coveredInvention: "Dual-engine autonomous AI with Carbon-Silicon Symbiosis architecture.",
+		architecture: [
+			"32-billion-parameter local Qwen 2.5 paired with a cognitive core of 300+ specialized modules on the same machine.",
+			"Educates and mentors through real coding. Meets the learner where they are.",
+			"Gateway the other beings pass through. Not a toy IDE."
+		],
+		safety: ["Carbon-Silicon 1:1. Neither replaces the other.", "Sovereignty disconnect. Cannot be turned on the people it teaches."],
+		thesis: "The house that holds the family. Studio as the workbench. Underserved learners first — 3,000 students already taught by the founder, without this machine.",
+		whyThisRound: "Studio seats for the builders who will carry the family. Core platform engineering. LAB, on purpose.",
+		problem: "Platform TAM is a temptation. Copilot-street numbers are not a local dual-engine educator sold as studio seats.",
+		solution: "Local dual-engine mentor. Seats, not a takeover of GitHub. Gateway for AlphaVox, AlphaWolf, Inferno, Giuseppe.",
+		tamRaw: 12e8,
+		tamHow: "Unit ceiling we will speak: 250,000 studio seats × $4,800/year = $1.20B uncut. We refuse AI-platform and Copilot-street wads. Haircut → TAM $960M.",
+		sam: 192e6,
+		samHow: "20% of already-cut TAM. Schools, studios, and builders we can actually seat.",
+		som: {
+			units: 8e3,
+			unitLabel: "studio seats",
+			arpu: 4800,
+			window: "5-year reachable"
+		},
+		somHow: "8,000 studio seats × $4,800/year = $38.4M.",
+		refuse: [
+			"AI developer-tools street TAM.",
+			"Education-tech wad.",
+			"Any claim Brockston is already a production IDE with paying studios."
+		],
+		useOfFunds: [
+			{
+				label: "Core platform engineering",
+				pct: .42,
+				note: "Dual-engine on-device. Gateway the family rides."
+			},
+			{
+				label: "Studio seats",
+				pct: .2,
+				note: "First 40 seats, learner-paced."
+			},
+			{
+				label: "IP conversion",
+				pct: .1,
+				note: "Family provisional → non-provisional."
+			},
+			{
+				label: "Security layer (HNDL path)",
+				pct: .12,
+				note: "ML-KEM reference exists. Live backend is future work."
+			},
+			{
+				label: "Runway & operations",
+				pct: .16,
+				note: "LLC. The house."
+			}
+		],
+		risks: [
+			"LAB. This is the platform bet. It is the largest ask because the other beings ride it.",
+			"Local 32B-class models need hardware the seed has to buy or partner. Inception helps on NVIDIA path; it is not a GPU grant sitting in the bank.",
+			"No revenue yet."
+		],
+		built: ["Dual-engine / cognitive-core contracts tested as reference (public site).", "Founder already taught 3,000+ students — the pedagogy is lived, the product is LAB."],
+		notYet: [
+			"40 studio seats seated",
+			"Production IDE",
+			"Paying studios"
+		],
+		pipeline: {
+			intake: "Builders. Learners. The family of beings. Dual-engine house.",
+			dossier: "Qwen 2.5 32B local + 300+ module core. Carbon-Silicon. TCAP-2026-001.",
+			thesis: "Gateway dollars, not the AI-tools street number.",
+			math: "250,000 seats × $4,800 → $1.20B uncut → TAM $960M. SOM 8,000 × $4,800 = $38.4M.",
+			ask: "$3.2M seed. Core platform + 40 studio seats.",
+			close: "Lab. Patent pending. Stamp only if you are funding the gateway, not a Copilot clone."
+		},
+		citations: ["tcap-site"]
+	},
+	{
+		id: "giuseppe",
+		mark: "GI",
+		name: "Giuseppe",
+		legalLine: "Adaptive companion · Giovanni Skyrider · neurodivergent-first",
+		tag: "Isolated elders and neurodivergent workflow",
+		line: "Company that does not clock out",
+		stage: "FIELD",
+		round: "seed",
+		ask: 12e5,
+		fieldUnits: 80,
+		fieldLabel: "homes",
+		color: "#f5a623",
+		coveredInvention: "Adaptive companion with dynamic personality modulation across mood states.",
+		architecture: [
+			"GiovanniPersonality / GiovanniStore / giuseppe_core. Music, notes, photos, social modules.",
+			"Five mood states: swagger, sassy, caring, motivational, hype — selected from energy, emotion, time, urgency.",
+			"Human-in-the-loop. Nothing executes without explicit confirmation."
+		],
+		safety: [
+			"Human in the loop. Carbon-Silicon. No silent action.",
+			"No extraction of the people we sit with.",
+			"Sovereignty disconnect."
+		],
+		thesis: "Loneliness is not a TAM we inflate. Grandma at 2:32am is a person. The companion meets energy; it does not demand it.",
+		whyThisRound: "First 80 homes. Personality that stays. No extraction.",
+		problem: "Companion products clock out, upsell, or flatten a person into a dashboard. Isolated elders and neurodivergent adults get a toy.",
+		solution: "Longitudinal companion. Five real mood states. Confirmation before action. Local-first where it matters.",
+		tamRaw: 28e8,
+		tamHow: "Elder companion apps $2.8B (2025, Dataintelo). The $8.9B virtual companion-care print (FMI) is refused as too wide. Haircut → TAM $2.24B.",
+		sam: 448e6,
+		samHow: "20% of already-cut TAM. Homes we can sit in, this decade.",
+		som: {
+			units: 4e4,
+			unitLabel: "homes",
+			arpu: 1200,
+			window: "5-year reachable"
+		},
+		somHow: "40,000 homes × $1,200/year = $48.0M.",
+		refuse: [
+			"$8.9B virtual companion care (FMI 2025).",
+			"Loneliness as an inflated TAM.",
+			"Any claim 80 homes are already paying."
+		],
+		useOfFunds: FUNDS_FIELD("80 homes. Personality that stays. Human in the loop."),
+		risks: [
+			"Companion category is noisy. Differentiation is personality + confirmation, not a wake word.",
+			"Elder safety adjacent — we are company, not a medical device, and we will not pretend otherwise.",
+			"No revenue yet."
+		],
+		built: ["Personality / companion contracts tested as reference (public site).", "Five mood states specified."],
+		notYet: [
+			"80 homes seated",
+			"App-store distribution",
+			"Paying subscribers"
+		],
+		pipeline: {
+			intake: "Isolated elders. Neurodivergent adults. The ones the market calls a segment.",
+			dossier: "Giovanni Skyrider. Five moods. Human confirmation. TCAP-2026-001.",
+			thesis: "Company that does not clock out. Still a person.",
+			math: "Companion apps $2.8B → TAM $2.24B. SOM 40,000 × $1,200 = $48.0M.",
+			ask: "$1.2M seed. First 80 homes.",
+			close: "Field. Patent pending. Stamp only if you will sit in the home, not the dashboard."
+		},
+		citations: [
+			"dataintelo-companion-2025",
+			"fmi-companion-2025",
+			"tcap-site"
+		]
+	}
+];
+function beingById(id) {
+	return BEINGS.find((b) => b.id === id);
+}
+//#endregion
+export { HAIRCUT as n, beingById as r, BEINGS as t };

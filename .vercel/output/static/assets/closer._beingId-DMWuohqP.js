@@ -1,0 +1,1 @@
+import{r as e}from"./utils-C9WOu9ye.js";import{t}from"./index-DZxdoT8s.js";import{t as n}from"./closer-view-DM8hjgy4.js";var r=e();function i(){let{beingId:e}=t.useParams();return(0,r.jsx)(n,{beingId:e})}export{i as component};

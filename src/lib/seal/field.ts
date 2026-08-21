@@ -1,0 +1,166 @@
+import type { Being } from "./types";
+
+export const SEQUENCE: {
+  id: Being["id"];
+  order: number;
+  why: string;
+}[] = [
+  {
+    id: "alphavox",
+    order: 1,
+    why: "The founder was nonverbal until 6. Clinic channel exists. Comparable is a board, not a wad. First 200 boards are the cleanest field story.",
+  },
+  {
+    id: "giuseppe",
+    order: 2,
+    why: "Homes, not clinics. Lower ARPU. Company, not a medical device. Can sit while AlphaVox boards are built. We will not pretend it is a health claim.",
+  },
+  {
+    id: "alphawolf",
+    order: 3,
+    why: "The 2:32am house. Higher duty of care. Supermajority lock is architecture. Field after the house already knows how to sit in a home.",
+  },
+  {
+    id: "inferno",
+    order: 4,
+    why: "Clinician-supervised seats. Safety before processing. VA is not this round. We do not put a crisis product in the field before the safety law is seated.",
+  },
+  {
+    id: "brockston",
+    order: 5,
+    why: "LAB on purpose. Gateway the family rides. Studio seats for the builders who will carry the rest. Largest ask because the others sit on it — not because we dressed it as Copilot.",
+  },
+];
+
+export const QUARTERS: {
+  id: string;
+  label: string;
+  title: string;
+  body: string;
+  sits: string[];
+}[] = [
+  {
+    id: "m0-3",
+    label: "Months 0–3",
+    title: "Paper, spec, the clock",
+    body: "Convert the provisional onto a path. Freeze field SKUs. Contractor list for clinical / caregiver / clinic. NVIDIA Inception is a membership path for hardware conversations — it is not a GPU sitting in the bank. Do not say units have shipped.",
+    sits: [
+      "IP conversion kicked. Counsel engaged. Serials stay in the vault.",
+      "AlphaVox board spec frozen. 36-hour offline as a design requirement, not a slogan.",
+      "Giuseppe personality states confirmed. Human-in-the-loop as a hard gate.",
+      "Brockston studio bench specified. Hardware for a local 32B-class model is a buy or a partner, named as such.",
+    ],
+  },
+  {
+    id: "m3-6",
+    label: "Months 3–6",
+    title: "First units in the door",
+    body: "Boards and homes start sitting. This is still not revenue. This is whether the architecture survives a real room.",
+    sits: [
+      "AlphaVox: first boards into homes and clinics. Onboarding, not a press photo.",
+      "Giuseppe: first homes. Confirmation before action, watched.",
+      "Brockston: first studio seats for the builders. Pedagogy is lived (3,000 students). Product is LAB.",
+      "Clinic / caregiver contractors on the loop. No chatbot disclaimer as a substitute.",
+    ],
+  },
+  {
+    id: "m6-9",
+    label: "Months 6–9",
+    title: "The harder rooms",
+    body: "AlphaWolf homes and Inferno seats. Duty of care goes up. Supermajority and safety-first are not optional in this window.",
+    sits: [
+      "AlphaWolf: first homes. Memory Lane is architecture plus lived thesis — not an RCT, and we will not call it one.",
+      "Inferno: first clinician-supervised seats. 988/741741 one step away, including offline. No processing without consent.",
+      "AlphaVox soak: thirty-six hours offline as a test, not a claim on a box.",
+      "Insurance for wandering / crisis is still a round-two problem. Named. Not solved by a slide.",
+    ],
+  },
+  {
+    id: "m9-18",
+    label: "Months 9–18",
+    title: "Soak, evidence, conversion",
+    body: "April 27, 2027 is the provisional clock. Evidence is collected. RCT is not claimed. Reimbursement is researched, not booked. Units that have not sat are not spoken as shipped.",
+    sits: [
+      "Non-provisional filed or the reason it was not is said out loud.",
+      "Field counts against the named units: 200 boards, 50 homes, 40 Inferno seats, 40 studio seats, 80 Giuseppe homes. Short of that is a number, not a story.",
+      "What we learned in the rooms goes into the architecture. What we did not ship stays on Not yet.",
+      "No VA contract is invented. No FDA clearance is invented. No paying-subscriber dashboard is invented.",
+    ],
+  },
+];
+
+export const CHANNELS: {
+  beingId: string;
+  whoBuys: string;
+  whoSells: string;
+  notYet: string;
+}[] = [
+  {
+    beingId: "alphavox",
+    whoBuys: "Families priced out of a voice. AAC clinics. SLPs who already buy boards.",
+    whoSells: "Founder-led clinic outreach this round. No sales org sits here yet. That is a line in the funds, not a headcount on the slide.",
+    notYet: "Reimbursement codes. A distributor. A claim that 200 boards are already in the field.",
+  },
+  {
+    beingId: "alphawolf",
+    whoBuys: "Family caregivers. The 2:32am house. Not a facility OS.",
+    whoSells: "Caregiver onboarding, one home at a time. We will not sell this through a hospital procurement deck in this round.",
+    notYet: "RCT. OpenSmell as a SKU. Insurance for wandering.",
+  },
+  {
+    beingId: "inferno",
+    whoBuys: "Clinicians who will supervise a seat. Veteran families who will not get a 30-day bed.",
+    whoSells: "Clinician-supervised only. No app-store therapy. No unsupervised 3 a.m. processing.",
+    notYet: "VA contract. Clinical trial. A sales team that knows federal.",
+  },
+  {
+    beingId: "brockston",
+    whoBuys: "Studios, schools, and builders we can actually seat. Underserved rooms first.",
+    whoSells: "Founder already taught 3,000+ students. The product is LAB. We sell seats, not a GitHub takeover.",
+    notYet: "Paying studios. Production IDE. A GPU grant.",
+  },
+  {
+    beingId: "giuseppe",
+    whoBuys: "Isolated elders. Neurodivergent adults. The ones the market calls a segment.",
+    whoSells: "Home by home. Companion, not a medical device, and we will not upsell it into one.",
+    notYet: "App-store distribution. Paying subscribers. A claim that 80 homes are already paying.",
+  },
+];
+
+export const COMPETITORS: {
+  beingId: string;
+  names: string;
+  weWin: string;
+  weLoseIf: string;
+}[] = [
+  {
+    beingId: "alphavox",
+    names: "Tobii Dynavox. PRC-Saltillo. Static symbol boards that already bill $8,000–$12,000.",
+    weWin: "Dignity and offline. Input that meets the person. We do not win on catalog breadth.",
+    weLoseIf: "The buyer needs an entrenched reimbursement machine and a 40-year accessory catalog on day one.",
+  },
+  {
+    beingId: "alphawolf",
+    names: "Facility dementia-care platforms. Companion robots. Anything that bills the $781B societal cost as if it were a product.",
+    weWin: "Family-care voice in the house. Supermajority before intervention. Memory Lane before force.",
+    weLoseIf: "The buyer is a facility. We do not sell a floor OS. We will not take a facility day-rate.",
+  },
+  {
+    beingId: "inferno",
+    names: "Chatbots with a crisis disclaimer. Consumer therapy apps. Private veteran residential stays at $20,000–$40,000 per 30 days.",
+    weWin: "Safety before processing. Clinician in the loop. Presence at 3 a.m., not a bed.",
+    weLoseIf: "The buyer wants unsupervised therapy, or wants the bed rate on a being that sits in the house.",
+  },
+  {
+    beingId: "brockston",
+    names: "GitHub Copilot. Cursor. Classroom tutors that live in someone else's cloud.",
+    weWin: "Local dual-engine. Carbon-Silicon. Studio seats. Gateway for the family.",
+    weLoseIf: "The buyer wants a Copilot clone and a street TAM. That partner should stamp someone else.",
+  },
+  {
+    beingId: "giuseppe",
+    names: "Wake-word companions. Apps that clock out, upsell, or flatten a person into a dashboard.",
+    weWin: "Five real mood states. Confirmation before action. Company that does not clock out.",
+    weLoseIf: "The buyer wants engagement metrics on lonely people. We will not take that check.",
+  },
+];

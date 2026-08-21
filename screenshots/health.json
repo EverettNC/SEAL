@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/health",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SEAL",
+      "hasCanvas": false,
+      "bodyTextLen": 8096,
+      "bodyTextHash": "cf313ab8ec1e359ccda42318f4d489bf832d5708736a4cd8ddce10873e67269f",
+      "bodyTextPrefix": "SEAL THE CLOSING AGENT Take Print Listen Packet Open AlphaWolf C",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/health.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SEAL",
+      "hasCanvas": false,
+      "bodyTextLen": 8096,
+      "bodyTextHash": "a0b475578fad7ab0777eef5eaacf1f95019ab005f1a4af33695f1ff87e01b28a",
+      "bodyTextPrefix": "SEAL THE CLOSING AGENT Open AlphaWolf Command Health Ledger Math",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/health-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/health.json"
+}
