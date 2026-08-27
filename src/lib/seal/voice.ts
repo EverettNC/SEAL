@@ -23,6 +23,15 @@ let charStarts: number[] = [];
 let fullText = "";
 let utterance: SpeechSynthesisUtterance | null = null;
 let wantPlay = false;
+let startTimer = 0;
+let retryTimer = 0;
+
+function clearTimers() {
+  if (startTimer) window.clearTimeout(startTimer);
+  if (retryTimer) window.clearTimeout(retryTimer);
+  startTimer = 0;
+  retryTimer = 0;
+}
 
 function clearHighlight() {
   document.querySelectorAll("[data-reading]").forEach((el) => el.removeAttribute("data-reading"));
@@ -53,6 +62,41 @@ function blockAtChar(index: number): number {
     if (index >= charStarts[i]) return i;
   }
   return 0;
+}
+
+function queueSpeak(u: SpeechSynthesisUtterance) {
+  const synth = window.speechSynthesis;
+  clearTimers();
+  startTimer = window.setTimeout(() => {
+    if (!wantPlay) return;
+    try {
+      if (synth.paused) synth.resume();
+    } catch {
+      /* some engines throw if they were never paused */
+    }
+    try {
+      synth.speak(u);
+    } catch {
+      wantPlay = false;
+      clearHighlight();
+      utterance = null;
+      useDeskVoice.setState({
+        status: "idle",
+        error: "This browser blocked the voice reader. Copy the room instead.",
+      });
+      return;
+    }
+    retryTimer = window.setTimeout(() => {
+      if (!wantPlay) return;
+      if (synth.speaking || synth.pending) return;
+      try {
+        if (synth.paused) synth.resume();
+        synth.speak(u);
+      } catch {
+        /* already reported on the first speak */
+      }
+    }, 160);
+  }, 80);
 }
 
 function speak() {
@@ -93,6 +137,7 @@ function speak() {
   u.onend = () => {
     if (!wantPlay) return;
     wantPlay = false;
+    clearTimers();
     clearHighlight();
     utterance = null;
     useDeskVoice.setState({ status: "idle", index: 0 });
@@ -101,6 +146,7 @@ function speak() {
   u.onerror = (event) => {
     if (event.error === "interrupted" || event.error === "canceled") return;
     wantPlay = false;
+    clearTimers();
     clearHighlight();
     utterance = null;
     useDeskVoice.setState({
@@ -112,23 +158,7 @@ function speak() {
   utterance = u;
   highlight(blocks[0]?.el);
   useDeskVoice.setState({ status: "playing", error: null, index: 0, total: blocks.length });
-
-  const start = () => {
-    if (!wantPlay) return;
-    try {
-      synth.speak(u);
-    } catch {
-      wantPlay = false;
-      clearHighlight();
-      utterance = null;
-      useDeskVoice.setState({
-        status: "idle",
-        error: "This browser blocked the voice reader. Copy the room instead.",
-      });
-    }
-  };
-
-  window.setTimeout(start, 0);
+  queueSpeak(u);
 }
 
 function loadAndSpeak() {
@@ -217,6 +247,7 @@ export const useDeskVoice = create<VoiceState>((set, get) => ({
   },
   stop: () => {
     wantPlay = false;
+    clearTimers();
     try {
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     } catch {
