@@ -19,7 +19,7 @@ function TermsPage() {
       lead={INSTRUMENT.paperNote}
     >
       <dl className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-        <Stat k="Vehicle" v="One LLC" hint={INSTRUMENT.formed} />
+        <Stat k="Vehicle" v="Delaware Inc" hint={INSTRUMENT.formed} />
         <Stat k="Paper" v="SAFE" hint={`${INSTRUMENT.round} · post-money`} />
         <Stat k="Family ask" v={usd(INSTRUMENT.familyAsk)} hint="One wire, or a being-level check" />
         <Stat
@@ -86,7 +86,7 @@ function TermsPage() {
       <section className="mt-12">
         <h2 className="font-serif text-2xl">One-check use of funds · {usd(family.ask)}</h2>
         <p className="mt-3 max-w-2xl text-muted">
-          Rolled from the five beings. Not a new budget invented for the family slide. Field
+          Rolled from the priced beings. Not a new budget invented for the family slide. Field
           modeled this round {usd(family.fieldDollars)} at list — not booked.
         </p>
         <div className="mt-6 rounded-xl border border-line bg-surface p-4">

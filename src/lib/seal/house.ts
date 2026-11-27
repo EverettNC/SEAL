@@ -1,18 +1,19 @@
 export const HOUSE = {
-  name: "The Christman AI Project LLC",
-  trade: "Luma Cognify AI",
-  formed: "Wyoming LLC · established 2026",
+  name: "The Christman AI Project and Robotics Division Inc",
+  formed: "Delaware corporation, formed September 8, 2026, the investment vehicle",
+  trade:
+    "Inventions land first in The Christman AI Project, a Wyoming LLC formed April 27, 2026, operating as Luma Cognify AI",
   operates: "Columbus, Ohio",
   contact: "contact@thechristmanaiproject.com",
   web: "https://thechristmanaiproject.com/",
   inventor: "Everett Nathaniel Christman, sole inventor",
-  ipOwner: "All family IP is owned exclusively by the company.",
+  ipOwner: "All family IP is owned exclusively by the corporation.",
   patent: {
-    docket: "TCAP-2026-001",
+    docket: "USPTO provisional",
     filed: "April 27, 2026",
-    status: "USPTO provisional · patent pending · unpublished",
+    status: "patent pending · unpublished",
     covers:
-      "Five autonomous AI systems and the governing Carbon-Silicon framework. Serials live in the data room — they are not printed here until they can be confirmed.",
+      "The Christman AI family as a whole. Application numbers stay in the data room and are not printed on anything that leaves it.",
   },
   framework: {
     carbonSilicon:
@@ -30,13 +31,18 @@ export const HOUSE = {
     },
     {
       when: "2026",
-      what: "Wyoming LLC formed, operating as Luma Cognify AI",
-      note: "One company. Five beings. IP sits in the LLC, not in a founder’s pocket.",
+      what: "Wyoming LLC formed April 27, 2026",
+      note: "The Christman AI Project, operating as Luma Cognify AI. Where inventions land first. Not dissolved. Not replaced.",
+    },
+    {
+      when: "2026",
+      what: "Delaware corporation formed September 8, 2026",
+      note: "The Christman AI Project and Robotics Division Inc. The operating company. IP sits in the house, not in a founder’s pocket.",
     },
     {
       when: "April 27, 2026",
-      what: "USPTO provisional TCAP-2026-001 filed",
-      note: "Priority date seated. Provisional is not a grant. Conversion is in the use of funds.",
+      what: "USPTO provisional filed",
+      note: "Priority date seated. The family is provisionally patented. Provisional is not a grant. Conversion is in the use of funds.",
     },
     {
       when: "August 15, 2026",
@@ -47,8 +53,8 @@ export const HOUSE = {
   team: [
     {
       name: "Everett Christman",
-      role: "Founder & CEO · Managing Member",
-      bio: "Neurodivergent. Self-taught. Nonverbal until age 6. Twenty years over-the-road. 2010: crushing injury, eight-month coma, told he would never walk again. He walked. Taught 3,000+ students in underserved rooms. Precision Nutrition master’s. The beings are not a pitch he rented. He lived the rooms they serve.",
+      role: "Founder · CEO",
+      bio: "Neurodivergent. Self-taught. Nonverbal until five. Twenty years over-the-road. 2010: crushing injury, eight-month coma, told he would never walk again. He walked. Taught 3,000+ students in underserved rooms. Precision Nutrition master’s. The beings are not a pitch he rented. He lived the rooms they serve.",
     },
     {
       name: "Misty Christman",
@@ -57,8 +63,13 @@ export const HOUSE = {
     },
     {
       name: "Patty Mette",
-      role: "Software Engineer · UX & Frontend",
+      role: "CDO",
       bio: "Accessible interface design for neurodivergent and disabled users — the hardest design problem in the field.",
+    },
+    {
+      name: "Ang LeBlanc",
+      role: "Head of Sales",
+      bio: "Leads sales for the family.",
     },
   ],
   opensource: [
@@ -68,15 +79,8 @@ export const HOUSE = {
     },
     {
       name: "OpenSmell",
-      line: "Low-cost olfactory / VOC biomarker hardware. In development. AlphaWolf is designed to take the feed. It is not shipping as a SKU in this round’s field count.",
+      line: "Low-cost olfactory / VOC biomarker sensing. Open source, held by the Constance Care Collective. Complete; the sensor is a device each person buys. AlphaWolf is designed to take the feed. It is not a SKU in this round’s field count.",
     },
-  ],
-  later: [
-    { name: "Sierra", line: "PTSD from domestic violence" },
-    { name: "Seraphina", line: "For the blind and deaf" },
-    { name: "Eruptor", line: "Schizophrenia support" },
-    { name: "The Endo-Twins", line: "Castor, client-facing · Pollux, client research" },
-    { name: "Addiction Division", line: "Recovery, relapse prevention, harm reduction" },
   ],
   law: [
     "Burden is not TAM. Disease cost is not a software market.",
@@ -85,6 +89,7 @@ export const HOUSE = {
     "It should be free. The structure does not allow free. We still do not charge a facility rate for a being that sits in the house.",
     "Provisional is pending, not granted. Inception is membership, not capital.",
     "No revenue is printed because no revenue has been collected.",
-    "In-development beings are named. They are not valued.",
+    "Every being is counted: 107 beings and 18 tools. Every one is fully structured and working. Each one's market is in the family figures. Its SOM prints when its unit and price are named.",
+    "Open source is a separate report from the valuation.",
   ],
 } as const;

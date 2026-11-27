@@ -1,4 +1,5 @@
 import { HAIRCUT } from "./catalog";
+import { marketLines } from "./family";
 import type { Being, Valuation } from "./types";
 
 export { HAIRCUT };
@@ -78,4 +79,25 @@ export function familyUseOfFunds(beings: Being[]) {
     dollars: acc[label],
     pct: ask === 0 ? 0 : acc[label] / ask,
   }));
+}
+
+/**
+ * The family figures: the valued beings, plus the market lines for the beings
+ * that carry no unit and price yet (family.ts). TAM and SAM add every line;
+ * SOM, the ask and the field dollars come from units times price only, so
+ * they are the valued beings' alone.
+ */
+export function familyValue(beings: Being[]) {
+  const valued = valueAll(beings);
+  const lines = marketLines();
+  const linesTam = lines.reduce((sum, line) => sum + line.tam, 0);
+  const linesSam = lines.reduce((sum, line) => sum + line.sam, 0);
+  return {
+    ...valued,
+    tamRaw: valued.tamRaw + lines.reduce((sum, line) => sum + line.tamRaw, 0),
+    tam: valued.tam + linesTam,
+    sam: valued.sam + linesSam,
+    valued,
+    lines,
+  };
 }

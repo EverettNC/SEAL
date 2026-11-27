@@ -8,10 +8,10 @@ export const SEQUENCE: {
   {
     id: "alphavox",
     order: 1,
-    why: "The founder was nonverbal until 6. Clinic channel exists. Comparable is a board, not a wad. First 200 boards are the cleanest field story.",
+    why: "The founder was nonverbal until five. Clinic channel exists. Comparable is a board, not a wad. First 200 boards are the cleanest field story.",
   },
   {
-    id: "giuseppe",
+    id: "giovanni",
     order: 2,
     why: "Homes, not clinics. Lower ARPU. Company, not a medical device. Can sit while AlphaVox boards are built. We will not pretend it is a health claim.",
   },
@@ -47,7 +47,7 @@ export const QUARTERS: {
     sits: [
       "IP conversion kicked. Counsel engaged. Serials stay in the vault.",
       "AlphaVox board spec frozen. 36-hour offline as a design requirement, not a slogan.",
-      "Giuseppe personality states confirmed. Human-in-the-loop as a hard gate.",
+      "Giovanni Skyrider personality states confirmed. Human-in-the-loop as a hard gate.",
       "Brockston studio bench specified. Hardware for a local 32B-class model is a buy or a partner, named as such.",
     ],
   },
@@ -58,7 +58,7 @@ export const QUARTERS: {
     body: "Boards and homes start sitting. This is still not revenue. This is whether the architecture survives a real room.",
     sits: [
       "AlphaVox: first boards into homes and clinics. Onboarding, not a press photo.",
-      "Giuseppe: first homes. Confirmation before action, watched.",
+      "Giovanni Skyrider: first homes. Confirmation before action, watched.",
       "Brockston: first studio seats for the builders. Pedagogy is lived (3,000 students). Product is LAB.",
       "Clinic / caregiver contractors on the loop. No chatbot disclaimer as a substitute.",
     ],
@@ -82,7 +82,7 @@ export const QUARTERS: {
     body: "April 27, 2027 is the provisional clock. Evidence is collected. RCT is not claimed. Reimbursement is researched, not booked. Units that have not sat are not spoken as shipped.",
     sits: [
       "Non-provisional filed or the reason it was not is said out loud.",
-      "Field counts against the named units: 200 boards, 50 homes, 40 Inferno seats, 40 studio seats, 80 Giuseppe homes. Short of that is a number, not a story.",
+      "Field counts against the named units: 200 boards, 50 homes, 40 Inferno seats, 40 studio seats, 80 Giovanni Skyrider homes. Short of that is a number, not a story.",
       "What we learned in the rooms goes into the architecture. What we did not ship stays on Not yet.",
       "No VA contract is invented. No FDA clearance is invented. No paying-subscriber dashboard is invented.",
     ],
@@ -120,7 +120,7 @@ export const CHANNELS: {
     notYet: "Paying studios. Production IDE. A GPU grant.",
   },
   {
-    beingId: "giuseppe",
+    beingId: "giovanni",
     whoBuys: "Isolated elders. Neurodivergent adults. The ones the market calls a segment.",
     whoSells: "Home by home. Companion, not a medical device, and we will not upsell it into one.",
     notYet: "App-store distribution. Paying subscribers. A claim that 80 homes are already paying.",
@@ -158,7 +158,7 @@ export const COMPETITORS: {
     weLoseIf: "The buyer wants a Copilot clone and a street TAM. That partner should stamp someone else.",
   },
   {
-    beingId: "giuseppe",
+    beingId: "giovanni",
     names: "Wake-word companions. Apps that clock out, upsell, or flatten a person into a dashboard.",
     weWin: "Five real mood states. Confirmation before action. Company that does not clock out.",
     weLoseIf: "The buyer wants engagement metrics on lonely people. We will not take that check.",

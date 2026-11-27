@@ -83,7 +83,7 @@ function authPopupPlugin(): Plugin {
           }
 
           const host = String(
-            req.headers["x-forwarded-host"] ?? req.headers.host ?? "localhost:8080",
+            req.headers["x-forwarded-host"] ?? req.headers.host ?? "localhost:7474",
           );
           const proto = String(
             req.headers["x-forwarded-proto"] ??
@@ -140,13 +140,15 @@ function authPopupPlugin(): Plugin {
   };
 }
 
-// `0.0.0.0:8080` is the live-preview contract — don't change host/port.
+// (2026-11-27) Port 8080 belongs to the lab and nothing else binds it, and
+// nothing in the stack listens on 0.0.0.0 (Everett's standing law). SEAL runs
+// on 127.0.0.1:7474, the port it already used on his Mac.
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
 export default defineConfig(({ command, isPreview }) => ({
   server: {
-    host: "0.0.0.0",
-    port: 8080,
+    host: "127.0.0.1",
+    port: 7474,
     strictPort: true,
   },
   preview: {

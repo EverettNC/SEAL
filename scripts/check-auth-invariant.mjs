@@ -25,7 +25,7 @@
 import { APP_ENV_ROUTE } from "./app-env-plugin.mjs";
 import { isMainModule, mergeAppEnv, projectRoot, readAppEnv } from "./with-app-env.mjs";
 
-const DEFAULT_DEV_URL = "http://127.0.0.1:8080";
+const DEFAULT_DEV_URL = "http://127.0.0.1:7474";
 
 /** The predicate `src/lib/auth/{client,server}.ts` apply to the flag. */
 export function authEnabledFromEnvValue(value) {
@@ -56,7 +56,7 @@ export function compareAuthInvariant({ devAuthEnabled, buildAuthEnabled }) {
       `[auth-invariant] dev server has sign-in ${label(devAuthEnabled)} but the next ` +
       `build has it ${label(buildAuthEnabled)}. Start the app with \`npm run dev\` — ` +
       "invoking vite directly skips scripts/with-app-env.mjs, so the dev server and " +
-      "the built output resolve .grok/app-env.json differently.",
+      "the built output resolve app-env.json differently.",
   };
 }
 

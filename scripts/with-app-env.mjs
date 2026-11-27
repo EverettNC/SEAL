@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Run a command with `.grok/app-env.json` merged into its environment.
+ * Run a command with `app-env.json` (at the repository root) merged into its environment.
  *
  * `dev`, `build` and `preview` all route through this wrapper, so the dev
  * server, the built bundle and the preview server can never disagree about
@@ -24,7 +24,11 @@ import { readFileSync, realpathSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-export const APP_ENV_REL_PATH = ".grok/app-env.json";
+// (2026-11-27) Was `.grok/app-env.json`. The `.grok` folder came out of this
+// repository with the Grok scaffolding, and the file went with it, so the
+// wrapper fell back to "auth on" and the app asked for a sign-in library
+// that is not installed. SEAL signs no one in: the file is back, at the root.
+export const APP_ENV_REL_PATH = "app-env.json";
 
 const VITE_PREFIX = "VITE_";
 

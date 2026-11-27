@@ -6,12 +6,13 @@ import { usd, pct } from "@/lib/seal/format";
 import { HOUSE } from "@/lib/seal/house";
 import { useTake } from "@/lib/seal/take";
 import { INSTRUMENT } from "@/lib/seal/terms";
-import { familyUseOfFunds, value, valueAll } from "@/lib/seal/valuation";
+import { FAMILY_COUNT } from "@/lib/seal/family";
+import { familyUseOfFunds, familyValue, value } from "@/lib/seal/valuation";
 
 export const Route = createFileRoute("/packet")({ component: PacketPage });
 
 function PacketPage() {
-  const family = valueAll(BEINGS);
+  const family = familyValue(BEINGS);
   const funds = familyUseOfFunds(BEINGS);
   const openTake = useTake((s) => s.openTake);
 
@@ -28,12 +29,12 @@ function PacketPage() {
       <article className="mx-auto max-w-3xl px-4 py-8 md:px-0 md:py-12">
         <header className="border-b border-paper-line pb-6">
           <p className="font-display text-sm tracking-[0.35em]">SEAL</p>
-          <h1 className="mt-3 font-serif text-4xl tracking-tight">The Christman AI Project LLC</h1>
+          <h1 className="mt-3 font-serif text-4xl tracking-tight">{HOUSE.name}</h1>
           <p className="mt-2 text-paper-muted">
-            {HOUSE.formed}. Operating as {HOUSE.trade}. {HOUSE.operates}.
+            {HOUSE.formed}. {HOUSE.trade}. {HOUSE.operates}.
           </p>
           <p className="mt-4 max-w-xl">
-            Five beings. Sourced math. One close at a time. Burden is not TAM. Provisional is
+            {FAMILY_COUNT.beings} beings and {FAMILY_COUNT.tools} tools, every one counted. Sourced math. One close at a time. Burden is not TAM. Provisional is
             pending. Inception is membership. No revenue is printed because none has been
             collected.
           </p>
@@ -47,7 +48,7 @@ function PacketPage() {
         </section>
         <p className="mt-3 text-xs text-paper-muted">
           This-round field modeled {usd(family.fieldDollars)} at list. Not booked. Paper:{" "}
-          {INSTRUMENT.paper}. Cap is blank. Conversion of {HOUSE.patent.docket} due{" "}
+          {INSTRUMENT.paper}. Cap is blank. Conversion of the {HOUSE.patent.docket} due{" "}
           {INSTRUMENT.conversion.due}.
         </p>
 
@@ -61,7 +62,7 @@ function PacketPage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="font-serif text-2xl">Five beings</h2>
+          <h2 className="font-serif text-2xl">{BEINGS.length} beings priced</h2>
           <ul className="mt-4 space-y-4">
             {BEINGS.map((being) => {
               const v = value(being);

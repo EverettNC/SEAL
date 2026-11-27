@@ -9,20 +9,21 @@ import { HOUSE } from "@/lib/seal/house";
 import { PARTNER_PATH } from "@/lib/seal/nav";
 import { useStamps } from "@/lib/seal/stamps";
 import { INSTRUMENT } from "@/lib/seal/terms";
-import { value, valueAll } from "@/lib/seal/valuation";
+import { FAMILY_COUNT } from "@/lib/seal/family";
+import { familyValue, value } from "@/lib/seal/valuation";
 
 
 export const Route = createFileRoute("/")({ component: Command });
 
 function Command() {
   const stamps = useStamps((s) => s.stamps);
-  const total = valueAll(BEINGS);
+  const total = familyValue(BEINGS);
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
-      <Kicker>Command · The Christman AI Project LLC</Kicker>
+      <Kicker>Command · {HOUSE.name}</Kicker>
       <h1 className="mt-3 max-w-3xl font-serif text-4xl leading-tight tracking-tight md:text-5xl">
-        Five beings. Sourced math. One close at a time.
+        {FAMILY_COUNT.beings} beings. {FAMILY_COUNT.tools} tools. Sourced math. One close at a time.
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
         This desk is the closer that goes in front of a partner. This week it also opens to NVIDIA
@@ -60,23 +61,33 @@ function Command() {
         <Stat
           k="Family TAM"
           v={usd(total.tam)}
-          hint={`${pct(1 - HAIRCUT)} already off the sourced headline`}
+          hint={`${pct(1 - HAIRCUT)} already off every sourced headline, the divisions included`}
         />
         <Stat k="Family SAM" v={usd(total.sam)} hint="Channel we can actually sell into" />
         <Stat k="Family SOM" v={usd(total.som)} hint="Units × price, 5-year reachable" />
-        <Stat k="Family ask" v={usd(total.ask)} hint="One LLC. Five beings. Seed." />
+        <Stat k="Family ask" v={usd(total.ask)} hint={`${BEINGS.length} beings priced. Seed.`} />
       </dl>
 
       <p className="mt-3 text-xs text-faint">
         This-round field modeled {usd(total.fieldDollars)} at list — units × seated price. Not
         booked. Paper is a {INSTRUMENT.paper}. Cap is blank until a term sheet is a term sheet.
-        Conversion of {HOUSE.patent.docket} is due {INSTRUMENT.conversion.due}.
+        Conversion of the {HOUSE.patent.docket} is due {INSTRUMENT.conversion.due}.
+      </p>
+      <p className="mt-2 text-xs text-faint">
+        Counted: {FAMILY_COUNT.beings} beings ({FAMILY_COUNT.compound} in the Compound,{" "}
+        {FAMILY_COUNT.outside} outside it) and {FAMILY_COUNT.tools} tools. {BEINGS.length} carry a
+        unit and a price, so their SOM is printed. The rest are in TAM and SAM from their own
+        published prints, and their SOM prints when their units and prices are named.{" "}
+        <Link to="/house" className="underline">
+          The whole family
+        </Link>
+        .
       </p>
 
       <section className="mt-10">
         <Kicker>The rooms a partner actually opens</Kicker>
         <p className="mt-2 max-w-2xl text-sm text-muted">
-          A ledger of five beings is not a meeting. The paper, the eighteen months, the empty
+          A ledger is not a meeting. The paper, the eighteen months, the empty
           folders, and the questions we ask ourselves first — those are.
         </p>
         <ol className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
@@ -98,7 +109,7 @@ function Command() {
       <div className="mt-8 grid gap-3 md:grid-cols-3">
         <Note>
           <span className="block text-xs uppercase tracking-widest text-faint">Entity</span>
-          {HOUSE.name}. {HOUSE.formed}. Operating as {HOUSE.trade}. {HOUSE.operates}.
+          {HOUSE.name}. {HOUSE.formed}. {HOUSE.trade}. {HOUSE.operates}.
         </Note>
         <Note>
           <span className="block text-xs uppercase tracking-widest text-faint">IP</span>

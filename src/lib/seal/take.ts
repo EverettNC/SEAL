@@ -72,7 +72,7 @@ export function printableHtml(text: string, title: string): string {
 </head>
 <body>
 <main>
-<p class="kicker">SEAL · The Christman AI Project LLC</p>
+<p class="kicker">SEAL · The Christman AI Project and Robotics Division Inc</p>
 <h1>${escapeHtml(title)}</h1>
 <pre>${escapeHtml(text)}</pre>
 </main>
