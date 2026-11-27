@@ -92,6 +92,26 @@ test("the count is Everett's count: 107 beings and 18 tools", () => {
   for (const being of COMPOUND) assert.ok(divisions.has(being.division), being.name);
 });
 
+test("the Compound is grouped as its page on port 3000 groups it", () => {
+  const counts = {};
+  for (const being of mod.family.COMPOUND) counts[being.division] = (counts[being.division] ?? 0) + 1;
+  assert.deepEqual(counts, {
+    source: 8,
+    governance: 5,
+    guardian: 4,
+    care: 9,
+    psych: 24,
+    addiction: 21,
+    oncology: 21,
+    gynecology: 7,
+    code: 1,
+  });
+  const names = mod.family.DIVISIONS.map((d) => d.name);
+  for (const name of ["Psych Division (Clinical Psychiatry & Psychological Sciences)", "Addiction Division", "Oncology & Neurology Division", "Gynecology Division"]) {
+    assert.ok(names.includes(name), name);
+  }
+});
+
 test("every figure names a source that is on the sources page", () => {
   const ids = new Set(mod.sources.SOURCES.map((s) => s.id));
   for (const being of mod.catalog.BEINGS) {
