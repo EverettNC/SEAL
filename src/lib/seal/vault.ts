@@ -20,7 +20,7 @@ export const VAULT: {
   },
   {
     id: "provisional",
-    item: "USPTO provisional TCAP-2026-001 — filing receipt",
+    item: "USPTO provisional — filing receipt",
     status: "request",
     note: "Filed April 27, 2026. Unpublished. Patent pending. Not a grant.",
   },
@@ -32,9 +32,15 @@ export const VAULT: {
   },
   {
     id: "llc",
-    item: "Wyoming LLC articles — The Christman AI Project LLC",
+    item: "Wyoming LLC articles — The Christman AI Project",
     status: "request",
     note: "Established 2026. Operating as Luma Cognify AI. Columbus, Ohio.",
+  },
+  {
+    id: "inc",
+    item: "Delaware certificate of incorporation — The Christman AI Project and Robotics Division Inc",
+    status: "request",
+    note: "Formed September 8, 2026. The investment vehicle.",
   },
   {
     id: "inception",
@@ -64,7 +70,7 @@ export const VAULT: {
     id: "cap-table",
     item: "Cap table / 409A / priced round docs",
     status: "absent",
-    note: "Pre-revenue LLC. No invented valuation. SAFE blanks stay blank.",
+    note: "Pre-revenue company. No invented valuation. SAFE blanks stay blank.",
   },
   {
     id: "financials",
@@ -112,7 +118,7 @@ export const VAULT: {
     id: "opensmell",
     item: "OpenSmell as a shipped SKU",
     status: "absent",
-    note: "In development. AlphaWolf is designed to take the feed. Not in the 50-home count.",
+    note: "Open source and complete; the sensor is bought by the family. AlphaWolf is designed to take the feed. Not in the 50-home count."
   },
 ];
 

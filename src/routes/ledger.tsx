@@ -3,13 +3,13 @@ import { Page } from "@/components/seal/ui";
 import { BEINGS, HAIRCUT } from "@/lib/seal/catalog";
 import { usd, pct, people } from "@/lib/seal/format";
 import { useStamps } from "@/lib/seal/stamps";
-import { value, valueAll } from "@/lib/seal/valuation";
+import { familyValue, value } from "@/lib/seal/valuation";
 
 export const Route = createFileRoute("/ledger")({ component: Ledger });
 
 function Ledger() {
   const stamps = useStamps((s) => s.stamps);
-  const total = valueAll(BEINGS);
+  const total = familyValue(BEINGS);
 
   return (
     <Page
@@ -70,9 +70,37 @@ function Ledger() {
             })}
           </tbody>
           <tfoot>
+            <tr className="border-t border-line">
+              <td className="px-4 py-3 font-medium">Priced beings</td>
+              <td className="px-4 py-3 font-mono text-xs">{BEINGS.length}</td>
+              <td className="px-4 py-3 font-mono tabular-nums">{usd(total.valued.tam)}</td>
+              <td className="px-4 py-3 font-mono tabular-nums">{usd(total.valued.sam)}</td>
+              <td className="px-4 py-3 font-mono tabular-nums">{usd(total.valued.som)}</td>
+              <td className="px-4 py-3 text-xs text-muted">units named per being</td>
+              <td className="px-4 py-3 font-mono text-xs tabular-nums">
+                {usd(total.valued.fieldDollars)}
+              </td>
+              <td className="px-4 py-3 font-mono tabular-nums">{usd(total.valued.ask)}</td>
+              <td className="px-4 py-3" />
+            </tr>
+            {total.lines.map((line) => (
+              <tr key={line.id} className="border-t border-line">
+                <td className="px-4 py-3">
+                  <span className="block font-medium">{line.label}</span>
+                  <span className="block text-xs text-muted">{line.source}</span>
+                </td>
+                <td className="px-4 py-3 font-mono text-xs">{line.covers}</td>
+                <td className="px-4 py-3 font-mono tabular-nums">{usd(line.tam)}</td>
+                <td className="px-4 py-3 font-mono tabular-nums">{usd(line.sam)}</td>
+                <td className="px-4 py-3 text-xs text-muted" colSpan={4}>
+                  SOM prints when the unit and price are named
+                </td>
+                <td className="px-4 py-3" />
+              </tr>
+            ))}
             <tr className="border-t border-line bg-surface">
               <td className="px-4 py-3 font-medium">Family</td>
-              <td className="px-4 py-3 font-mono text-xs">LLC</td>
+              <td className="px-4 py-3 font-mono text-xs">Inc</td>
               <td className="px-4 py-3 font-mono tabular-nums">{usd(total.tam)}</td>
               <td className="px-4 py-3 font-mono tabular-nums">{usd(total.sam)}</td>
               <td className="px-4 py-3 font-mono tabular-nums">{usd(total.som)}</td>

@@ -65,7 +65,7 @@ function VaultPage() {
         <div className="rounded-xl border border-line bg-surface p-5">
           <p className="text-xs uppercase tracking-widest text-faint">Packet</p>
           <p className="mt-2 text-sm text-muted">
-            The one-pager a partner can print. Family ask, law, five beings, blanks.
+            The one-pager a partner can print. Family ask, law, the priced beings, the count, blanks.
           </p>
           <Link to="/packet" className="mt-3 inline-flex min-h-11 items-center text-sm text-ink underline">
             Open the packet

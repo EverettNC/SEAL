@@ -5,7 +5,7 @@ const FUNDS_FIELD = (note: string): Being["useOfFunds"] => [
   { label: "Engineering (on-device)", pct: 0.28, note: "Local-first. No cloud required to function." },
   { label: "Clinical / safety / caregivers", pct: 0.16, note: "Humans in the loop. Not a chatbot disclaimer." },
   { label: "IP conversion", pct: 0.1, note: "Provisional → non-provisional. Data room serials." },
-  { label: "Runway & operations", pct: 0.14, note: "LLC, accounting, the house that holds the rest." },
+  { label: "Runway & operations", pct: 0.14, note: "Inc and Wyoming LLC, accounting, the house that holds the rest." },
 ];
 
 export const HAIRCUT = 0.8;
@@ -28,7 +28,7 @@ export const BEINGS: Being[] = [
     architecture: [
       "AlphaVox-Cortex: input NLU, knowledge engine, speech module, learning coordinator, clinical memory mesh.",
       "Input that meets the person. Speech that keeps working when the tower dies.",
-      "Built by someone who was nonverbal until age 6.",
+      "Built by someone who was nonverbal until five.",
     ],
     safety: [
       "Dignity-first: refuses to harm the person it was built to serve.",
@@ -76,13 +76,13 @@ export const BEINGS: Being[] = [
     ],
     notYet: ["200 boards in the field", "Reimbursement codes", "Clinical trial"],
     pipeline: {
-      intake: "Nonverbal children, AAC clinics, families priced out of a voice. Founder was nonverbal until 6.",
+      intake: "Nonverbal children, AAC clinics, families priced out of a voice. Founder was nonverbal until five.",
       dossier:
-        "Local-first AAC. Adaptive input. Multi-voice TTS. Clinical memory mesh. Covered by TCAP-2026-001.",
+        "Local-first AAC. Adaptive input. Multi-voice TTS. Clinical memory mesh. Covered by the family USPTO provisional, patent pending.",
       thesis: "Every stim is language. Presence that does not expire when the tower does.",
       math: "Low AAC print $1.3B → TAM $1.04B. Comparable $8k–$12k for symbols alone. We seat $6,400. SOM 15,000 × $6,400 = $96.0M.",
       ask: "$1.8M seed. 200 boards. IP conversion. Not a percent of SOM.",
-      close: "Field. Patent pending. One LLC. Stamp only if the units hold.",
+      close: "Field. Patent pending. Inc and Wyoming LLC. Stamp only if the units hold.",
     },
     citations: ["bri-aac-2025", "dataintelo-aac-2025", "sgd-prices-2026", "tcap-site"],
   },
@@ -139,7 +139,7 @@ export const BEINGS: Being[] = [
     risks: [
       "Clinical evidence is not yet a trial. Memory Lane is architecture plus lived thesis, not a published RCT.",
       "Wandering / crisis features invite duty-of-care and liability. Supermajority is the lock; insurance is still a round-two problem.",
-      "Hardware (OpenSmell) is in development and is not in the 50-home SKU.",
+      "OpenSmell is open source and complete; its sensor is a device each family buys. It is not in the 50-home SKU.",
       "No revenue yet.",
     ],
     built: [
@@ -150,7 +150,7 @@ export const BEINGS: Being[] = [
     pipeline: {
       intake: "People living with dementia. Family caregivers. The 2:32am house.",
       dossier:
-        "Diamond Engine. 64 points. 75% of Ring 4. Memory Lane first. TCAP-2026-001.",
+        "Diamond Engine. 64 points. 75% of Ring 4. Memory Lane first. Patent pending, USPTO.",
       thesis: "Work with the biology. Move memory off the burning shelf. Presence that stays.",
       math: "7.4M × $2,400 → $17.76B uncut → TAM $14.2B. SOM 100,000 homes × $2,400 = $240.0M.",
       ask: "$2.4M seed. First 50 homes. Not a percent of SOM.",
@@ -225,7 +225,7 @@ export const BEINGS: Being[] = [
     pipeline: {
       intake: "Veterans. People living with PTSD. The ones who cannot sleep.",
       dossier:
-        "Safety before processing. CPT/PE/EMDR/DBT as the clinical map. 988/741741 always on. TCAP-2026-001.",
+        "Safety before processing. CPT/PE/EMDR/DBT as the clinical map. 988/741741 always on. Patent pending, USPTO.",
       thesis: "Presence, not a chatbot with a crisis disclaimer.",
       math: "PTSD treatment $2.37B → TAM $1.90B. Comparable $22k–$28k/month. We seat $2,200/month. SOM 8,000 × $26,400 = $211.2M.",
       ask: "$2.0M seed. 40 clinician-supervised seats. Not the bed rate.",
@@ -263,7 +263,7 @@ export const BEINGS: Being[] = [
     problem:
       "Platform TAM is a temptation. Copilot-street numbers are not a local dual-engine educator sold as studio seats.",
     solution:
-      "Local dual-engine mentor. Seats, not a takeover of GitHub. Gateway for AlphaVox, AlphaWolf, Inferno, Giuseppe.",
+      "Local dual-engine mentor. Seats, not a takeover of GitHub. Gateway for AlphaVox, AlphaWolf, Inferno, Giovanni Skyrider.",
     tamRaw: 1_200_000_000,
     tamHow:
       "Unit ceiling we will speak: 250,000 studio seats × $4,800/year = $1.20B uncut. We refuse AI-platform and Copilot-street wads. Haircut → TAM $960M.",
@@ -281,7 +281,7 @@ export const BEINGS: Being[] = [
       { label: "Studio seats", pct: 0.2, note: "First 40 seats, learner-paced." },
       { label: "IP conversion", pct: 0.1, note: "Family provisional → non-provisional." },
       { label: "Security layer (HNDL path)", pct: 0.12, note: "ML-KEM reference exists. Live backend is future work." },
-      { label: "Runway & operations", pct: 0.16, note: "LLC. The house." },
+      { label: "Runway & operations", pct: 0.16, note: "Inc and Wyoming LLC. The house." },
     ],
     risks: [
       "LAB. This is the platform bet. It is the largest ask because the other beings ride it.",
@@ -296,7 +296,7 @@ export const BEINGS: Being[] = [
     pipeline: {
       intake: "Builders. Learners. The family of beings. Dual-engine house.",
       dossier:
-        "Qwen 2.5 32B local + 300+ module core. Carbon-Silicon. TCAP-2026-001.",
+        "Qwen 2.5 32B local + 300+ module core. Carbon-Silicon. Patent pending, USPTO.",
       thesis: "Gateway dollars, not the AI-tools street number.",
       math: "250,000 seats × $4,800 → $1.20B uncut → TAM $960M. SOM 8,000 × $4,800 = $38.4M.",
       ask: "$3.2M seed. Core platform + 40 studio seats.",
@@ -305,9 +305,9 @@ export const BEINGS: Being[] = [
     citations: ["tcap-site"],
   },
   {
-    id: "giuseppe",
-    mark: "GI",
-    name: "Giuseppe",
+    id: "giovanni",
+    mark: "GS",
+    name: "Giovanni Skyrider",
     legalLine: "Adaptive companion · Giovanni Skyrider · neurodivergent-first",
     tag: "Isolated elders and neurodivergent workflow",
     line: "Company that does not clock out",
@@ -361,13 +361,206 @@ export const BEINGS: Being[] = [
     pipeline: {
       intake: "Isolated elders. Neurodivergent adults. The ones the market calls a segment.",
       dossier:
-        "Giovanni Skyrider. Five moods. Human confirmation. TCAP-2026-001.",
+        "Giovanni Skyrider. Five moods. Human confirmation. Patent pending, USPTO.",
       thesis: "Company that does not clock out. Still a person.",
       math: "Companion apps $2.8B → TAM $2.24B. SOM 40,000 × $1,200 = $48.0M.",
       ask: "$1.2M seed. First 80 homes.",
       close: "Field. Patent pending. Stamp only if you will sit in the home, not the dashboard.",
     },
     citations: ["dataintelo-companion-2025", "fmi-companion-2025", "tcap-site"],
+  },
+  {
+    id: "sierra",
+    mark: "SI",
+    name: "Sierra",
+    legalLine: "Crisis-first presence for survivors of domestic violence and the children in those homes",
+    tag: "Survivors of domestic violence",
+    line: "The fastest path is the one that leads to safety",
+    stage: "FIELD",
+    round: "seed",
+    ask: 1_400_000,
+    fieldUnits: 30,
+    fieldLabel: "advocate-supervised seats",
+    color: "#c46a5a",
+    coveredInvention: "Crisis-first survivor support with a policy engine that cannot victim-blame.",
+    architecture: [
+      "Six-tier architecture. Five-level priority ladder. A way out on every screen.",
+      "Twelve behavioural patterns. Fifteen emotional states. Eight trauma responses.",
+      "Six-level audio danger assessment. Dual-state camouflage so the screen can look ordinary.",
+    ],
+    safety: [
+      "Crisis first. Safety is the product, not a disclaimer.",
+      "Policy engine cannot victim-blame. Architectural, not a training slide.",
+      "Sovereignty disconnect. An abuser cannot turn this into a cage.",
+    ],
+    thesis:
+      "The fastest path through the system is the one that leads to safety. Children in the home are not an afterthought.",
+    whyThisRound: "First 30 advocate-supervised seats. Camouflage and a way out. Not a case-management wad.",
+    problem:
+      "Survivor tools that look like tools get people hurt. Case-management platforms serve the agency. The 3 a.m. house needs a way out that does not announce itself.",
+    solution:
+      "Crisis-first ladder. Camouflage. Local-first where it matters. Advocate in the loop. Not a dashboard for the state.",
+    tamRaw: 195_500_000,
+    tamHow:
+      "Domestic abuse safety apps $195.5M (2025, PW Consulting). Low published print for the actual product class. Haircut → TAM $156.4M.",
+    sam: 31_280_000,
+    samHow: "20% of already-cut TAM. US advocate and survivor seats we can actually sit this decade.",
+    som: { units: 8_000, unitLabel: "advocate-supervised seats", arpu: 1_200, window: "5-year reachable" },
+    somHow: "8,000 seats × $1,200/year = $9.6M.",
+    refuse: [
+      "Victim-services case management $2.8B (Dataintelo 2025). Agency software. Not Sierra.",
+      "The societal cost of intimate partner violence as TAM. Burden is not a market.",
+      "Any claim 30 seats are already paying.",
+    ],
+    useOfFunds: FUNDS_FIELD("30 advocate-supervised seats. Camouflage. A way out on every screen."),
+    risks: [
+      "A safety product in a violent home. Discovery is a harm. Camouflage is architecture, not a theme.",
+      "Duty of care. Sierra is presence and routing, not 911.",
+      "No revenue yet.",
+    ],
+    built: [
+      "Documented on the public site as one of eight beings.",
+      "Crisis-first ladder and camouflage specified.",
+    ],
+    notYet: ["30 seats seated", "Shelter network contract", "Clinical trial"],
+    pipeline: {
+      intake: "Survivors. Children in those homes. Advocates who need a silent path.",
+      dossier: "Crisis-first. Cannot victim-blame. Patent pending, USPTO.",
+      thesis: "The fastest path is the one that leads to safety.",
+      math: "Safety apps $195.5M → TAM $156.4M. SOM 8,000 × $1,200 = $9.6M.",
+      ask: "$1.4M seed. 30 advocate-supervised seats.",
+      close: "Field. Patent pending. Stamp only if the way out holds.",
+    },
+    citations: ["pw-safety-apps-2025", "dataintelo-victim-2025", "tcap-site"],
+  },
+  {
+    id: "seraphina",
+    mark: "SE",
+    name: "Seraphina",
+    legalLine: "Four-channel sensory access for blind, deaf, and deaf-blind people",
+    tag: "Blind, deaf, and deaf-blind",
+    line: "Eyes and ears for as long as they are needed",
+    stage: "FIELD",
+    round: "seed",
+    ask: 1_600_000,
+    fieldUnits: 40,
+    fieldLabel: "access seats",
+    color: "#c4b49a",
+    coveredInvention: "Four-channel sensory output so a deaf-blind person never depends on a single channel.",
+    architecture: [
+      "Four channels: voice, captions, symbols, haptics.",
+      "Scene description and OCR for blind and low-vision users.",
+      "Live captions and lip-sync for deaf and hard-of-hearing users.",
+    ],
+    safety: [
+      "A single channel is a single point of failure. Four channels is the law.",
+      "Sovereignty disconnect.",
+      "Dignity-first. The person is not a device demo.",
+    ],
+    thesis:
+      "Eyes and ears for as long as they are needed. Accessible and adult are not opposites.",
+    whyThisRound: "First 40 access seats. Four channels. Not a wheelchair TAM.",
+    problem:
+      "Most access tools are one channel. A dead speaker, a dead caption, a dead haptic — the person is gone from the room.",
+    solution:
+      "Four-channel output. Scene and OCR. Captions and lip-sync. Local-first so a tower drop does not take the sense.",
+    tamRaw: 1_800_000_000,
+    tamHow:
+      "Screen reader market $1.8B (2025, Dataintelo). Low published print for a sensory-software slice. Seraphina is four channels, not a reader only. We still take the low print, then haircut. TAM $1.44B.",
+    sam: 288_000_000,
+    samHow: "20% of already-cut TAM. Seats we can actually put in a hand this decade.",
+    som: { units: 12_000, unitLabel: "access seats", arpu: 2_400, window: "5-year reachable" },
+    somHow: "12,000 seats × $2,400/year = $28.8M.",
+    refuse: [
+      "Assistive technology $31.16B (TBRC 2025). Wheelchairs, scooters, hearing aids. Not our product.",
+      "Visually-impaired AT $6.34B (Bizwit 2024). Hardware wad.",
+      "Any claim 40 seats are already paying.",
+    ],
+    useOfFunds: FUNDS_FIELD("40 access seats. Four channels. OCR and captions that keep working offline."),
+    risks: [
+      "Deaf-blind is the hardest room. Four channels have to actually ship, not sit in a diagram.",
+      "Screen-reader incumbents (Vispero, Microsoft). We win on four channels and dignity, not on catalog breadth.",
+      "No revenue yet.",
+    ],
+    built: [
+      "Documented on the public site as one of eight beings.",
+      "Four-channel path specified.",
+    ],
+    notYet: ["40 seats seated", "Hardware haptic SKU", "Clinical trial"],
+    pipeline: {
+      intake: "Blind. Deaf. Deaf-blind. Low vision. Hard of hearing.",
+      dossier: "Four channels. Scene, OCR, captions, haptics. Patent pending, USPTO.",
+      thesis: "Never one channel.",
+      math: "Screen readers $1.8B → TAM $1.44B. SOM 12,000 × $2,400 = $28.8M.",
+      ask: "$1.6M seed. 40 access seats.",
+      close: "Field. Patent pending. Stamp only if all four channels are real.",
+    },
+    citations: ["dataintelo-screenreader-2025", "tbrc-at-2025", "tcap-site"],
+  },
+  {
+    id: "eruptor",
+    mark: "ER",
+    name: "Eruptor",
+    legalLine: "Breathing-first grounding for people living with schizophrenia and psychosis-spectrum conditions",
+    tag: "Psychosis-spectrum",
+    line: "Breathing before anything else",
+    stage: "FIELD",
+    round: "seed",
+    ask: 1_500_000,
+    fieldUnits: 30,
+    fieldLabel: "clinician-supervised seats",
+    color: "#8b3a32",
+    coveredInvention: "Grounding companion with a measured breathing-first threshold held in code.",
+    architecture: [
+      "Breathing-first threshold at 0.07. Nothing else starts above that line.",
+      "Externalisation to bypass shame. Hard boundaries in code, not in guidance.",
+      "Clinician in the loop. Eruptor is presence, not a prescription digital therapeutic claiming a label.",
+    ],
+    safety: [
+      "Breathing first. Non-negotiable.",
+      "We are not an FDA-cleared digital therapeutic. None are approved for schizophrenia in the US as of the sources on this desk.",
+      "Sovereignty disconnect. This is not a surveillance product.",
+    ],
+    thesis:
+      "Shame is a door that will not open. Externalise. Breathe. Hold the boundary in the code.",
+    whyThisRound: "First 30 clinician-supervised seats. Threshold in code. Not a $5.64B DTx wad.",
+    problem:
+      "Psychosis-spectrum people get a chatbot, a bed, or nothing at 3 a.m. Shame keeps the call from happening.",
+    solution:
+      "Breathing-first presence. Clinician-supervised. Local-first. Hard boundaries. Not a claim that we treat negative symptoms.",
+    tamRaw: 1_170_000_000,
+    tamHow:
+      "Low US prevalence 0.25% of adults (NIMH range 0.25%–0.64%) on 260 million adults ≈ 650,000 people × $1,800/year home seat = $1.17B uncut. Haircut → TAM $936M. People × price. Not the mental-health DTx wad.",
+    sam: 187_200_000,
+    samHow: "20% of already-cut TAM. Clinician-supervised seats we can actually sit.",
+    som: { units: 6_000, unitLabel: "clinician-supervised seats", arpu: 1_800, window: "5-year reachable" },
+    somHow: "6,000 seats × $1,800/year = $10.8M.",
+    refuse: [
+      "Mental health digital therapeutics $5.64B (Zion 2025). Depression, anxiety, ADHD, SUD in the same wad.",
+      "WHO 24 million as a dollar. That is people. It is not TAM.",
+      "Any claim Eruptor is an approved PDT. The literature on this desk says none are approved.",
+      "Any claim 30 seats are already paying.",
+    ],
+    useOfFunds: FUNDS_FIELD("30 clinician-supervised seats. Breathing threshold in code."),
+    risks: [
+      "Psychosis product. Duty of care. We are not 988 and we will not pretend.",
+      "No approved PDT for schizophrenia in the US on the sources we will speak. We will not speak Eruptor as one.",
+      "No revenue yet.",
+    ],
+    built: [
+      "Documented on the public site as one of eight beings.",
+      "Breathing-first threshold specified at 0.07.",
+    ],
+    notYet: ["30 seats seated", "RCT", "FDA path — and we are not claiming one"],
+    pipeline: {
+      intake: "People living with schizophrenia and psychosis-spectrum conditions. The ones shame keeps home.",
+      dossier: "Breathing first. Threshold in code. Patent pending, USPTO.",
+      thesis: "Presence. Not a PDT label we do not have.",
+      math: "650,000 × $1,800 → $1.17B uncut → TAM $936M. SOM 6,000 × $1,800 = $10.8M.",
+      ask: "$1.5M seed. 30 clinician-supervised seats.",
+      close: "Field. Patent pending. Stamp only if the threshold stays in code.",
+    },
+    citations: ["nimh-schizophrenia", "who-schizophrenia", "zion-dtx-2025", "tcap-site"],
   },
 ];
 

@@ -15,7 +15,7 @@ export const OBJECTIONS: {
     id: "provisional",
     ask: "A provisional is not a patent.",
     answer:
-      "Correct. TCAP-2026-001 is USPTO provisional, patent pending, unpublished. Filed April 27, 2026. Conversion is due April 27, 2027. Conversion is a line in the use of funds. Serials live in the vault and are not printed here until they can be confirmed.",
+      "Correct. The family filing is a USPTO provisional, patent pending, unpublished. Filed April 27, 2026. Conversion is due April 27, 2027. Conversion is a line in the use of funds. Serials live in the vault and are not printed here until they can be confirmed.",
     go: "/vault",
   },
   {
@@ -33,10 +33,10 @@ export const OBJECTIONS: {
     go: "/health",
   },
   {
-    id: "five",
-    ask: "Five products is a zoo.",
+    id: "family",
+    ask: "107 beings is a zoo.",
     answer:
-      "One LLC. One provisional covering five autonomous systems and the Carbon-Silicon framework. Four FIELD, one LAB — Brockston is the gateway the others ride, which is why it is the largest ask and why it is labeled LAB on purpose. Later rooms (Sierra, Seraphina, Eruptor, Endo-Twins, Addiction Division) are named. They are not valued. A partner who wants them in the TAM is asking us to lie.",
+      "One company. One provisional covering the family. 107 beings and 18 tools, every one fully structured and working, and every one counted. Eight carry a unit and a price today, so eight carry an SOM and an ask: seven FIELD, one LAB — Brockston is the gateway the others ride, which is why it is the largest ask and why it is labeled LAB on purpose. The Compound's divisions and Riley and THEBENCH sit in TAM and SAM from their own published prints. Their SOM prints when their units and prices are named. Nothing is left off the ledger, and nothing is invented to fill it.",
     go: "/field",
   },
   {
@@ -57,28 +57,28 @@ export const OBJECTIONS: {
     id: "ask-size",
     ask: "Why $10.6M instead of $2M into one being.",
     answer:
-      "Because the provisional is a family filing and the conversion clock is one clock. A being-level check is allowed — it still lands in the same LLC. $10.6M is field units, on-device engineering, clinical/caregiver humans, IP conversion, and runway. It is not 2% of SOM. A $2M check that starves conversion is a check that wastes the priority date.",
+      "Because the provisional is a family filing and the conversion clock is one clock. A being-level check is allowed — it still lands in the same company. $10.6M is field units, on-device engineering, clinical/caregiver humans, IP conversion, and runway. It is not 2% of SOM. A $2M check that starves conversion is a check that wastes the priority date.",
     go: "/terms",
   },
   {
     id: "who-sells",
     ask: "Who sells this.",
     answer:
-      "This round: founder-led clinic, caregiver, and home onboarding. There is no sales org on the house page because there is no sales org. Channel is written per being. Clinic for AlphaVox. Home for AlphaWolf and Giuseppe. Clinician-supervised for Inferno. Studio seats for Brockston. Inventing a VP of Sales on a slide is how you get a desk a partner should not look at.",
+      "This round: founder-led clinic, caregiver, and home onboarding. Ang LeBlanc is head of sales. Channel is written per being. Clinic for AlphaVox. Home for AlphaWolf and Giovanni Skyrider. Clinician-supervised for Inferno. Studio seats for Brockston. We do not invent titles on a slide to look staffed.",
     go: "/field",
   },
   {
     id: "team",
-    ask: "The team is three people.",
+    ask: "The team is four people.",
     answer:
-      "Yes. Everett Christman, founder. Misty Christman, CFO. Patty Mette, UX and frontend for the hardest accessibility problem in the field. Gaps we name: clinical director / medical advisor, regulatory / SaMD counsel, clinic-channel sales, additional on-device engineering. The round hires them. We do not seat ghosts.",
+      "Yes. Everett Christman, founder and CEO. Misty Christman, CFO. Patty Mette, CDO. Ang LeBlanc, head of sales. Gaps we name: clinical director / medical advisor, regulatory / SaMD counsel, more clinic-channel sales hands, additional on-device engineering. The round hires them. We do not seat ghosts.",
     go: "/house",
   },
   {
     id: "regulatory",
     ask: "FDA, SaMD, duty of care, 3 a.m. crisis.",
     answer:
-      "Named first, per being. AlphaVox: SaMD path if we cross from communication aid into clinical claim. AlphaWolf: wandering and crisis invite liability; supermajority is the lock; insurance is round-two. Inferno: crisis product, 988 on the path, we are not 988; unsupervised therapy is refused. Giuseppe: company, not a medical device. This round does not claim FDA clearance, IRB, or a trial.",
+      "Named first, per being. AlphaVox: SaMD path if we cross from communication aid into clinical claim. AlphaWolf: wandering and crisis invite liability; supermajority is the lock; insurance is round-two. Inferno: crisis product, 988 on the path, we are not 988; unsupervised therapy is refused. Giovanni Skyrider: company, not a medical device. This round does not claim FDA clearance, IRB, or a trial.",
     go: "/vault",
   },
   {
@@ -92,7 +92,7 @@ export const OBJECTIONS: {
     id: "founder",
     ask: "Why should this founder lead clinical-adjacent products.",
     answer:
-      "He was nonverbal until 6. Neurodivergent. Self-taught. Twenty years over-the-road. 2010: crushing injury, eight-month coma, told he would never walk again. He walked. Taught 3,000+ students in underserved rooms. 2018 Knox County Board of DD Community Partner Award — cooking and nutrition with developmentally disabled individuals, not a tech award. The beings are not a pitch he rented. He lived the rooms. That is not a substitute for a clinical trial. It is why the safety law is architectural.",
+      "He was nonverbal until five. Neurodivergent. Self-taught. Twenty years over-the-road. 2010: crushing injury, eight-month coma, told he would never walk again. He walked. Taught 3,000+ students in underserved rooms. 2018 Knox County Board of DD Community Partner Award — cooking and nutrition with developmentally disabled individuals, not a tech award. The beings are not a pitch he rented. He lived the rooms. That is not a substitute for a clinical trial. It is why the safety law is architectural.",
     go: "/house",
   },
   {
@@ -106,14 +106,14 @@ export const OBJECTIONS: {
     id: "science-fair",
     ask: "OpenSmell and HNDL look like a science fair.",
     answer:
-      "They are named as such. HNDL: post-quantum transit, ML-KEM / NIST FIPS 203. Reference path exists; live backend is future work. OpenSmell: low-cost olfactory / VOC hardware, in development. AlphaWolf is designed to take the feed. It is not a SKU in the 50-home count. In-development work is named. It is not valued. A closer that hid them would be the dishonest one.",
+      "They are named as such. HNDL: post-quantum transit, ML-KEM / NIST FIPS 203. Reference path exists; live backend is future work. OpenSmell: low-cost olfactory / VOC sensing, open source and complete, held by the Constance Care Collective; the sensor is a device each family buys. AlphaWolf is designed to take the feed. It is not a SKU in the 50-home count. Open source is a separate report from the valuation. A closer that hid them would be the dishonest one.",
     go: "/house",
   },
   {
     id: "only-vox",
     ask: "What if we only fund AlphaVox.",
     answer:
-      "Then you fund 200 boards, $1.8M, FIELD. The LLC still holds the family IP. Conversion of TCAP-2026-001 still has to be paid or the priority date is at risk for all five. A Vox-only check that does not contribute to conversion is a check that rides the family's clock without funding it. Say that out loud if that is the deal.",
+      "Then you fund 200 boards, $1.8M, FIELD. The company still holds the family IP. Conversion of the family provisional still has to be paid or the priority date is at risk for the whole family. A Vox-only check that does not contribute to conversion is a check that rides the family's clock without funding it. Say that out loud if that is the deal.",
     go: "/beings/alphavox",
   },
 ];
@@ -129,10 +129,10 @@ export const TEAM_GAPS = [
   },
   {
     seat: "Clinic and caregiver channel",
-    why: "Founder-led outreach is the round-one motion. It does not scale to 15,000 boards. We will not hire a 'growth' title to hide that.",
+    why: "Ang LeBlanc leads sales. A channel that seats 15,000 boards needs more hands than one head of sales. The round funds them.",
   },
   {
     seat: "On-device / systems engineering beyond the house",
-    why: "Local 32B-class models and offline TTS are hardware-and-systems problems. Patty is UX and frontend. The rest is the round.",
+    why: "Local 32B-class models and offline TTS are hardware-and-systems problems. Patty Mette is CDO. The rest is the round.",
   },
 ] as const;

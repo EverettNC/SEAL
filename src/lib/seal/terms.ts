@@ -19,12 +19,12 @@ export const INSTRUMENT = {
     {
       label: "Family check",
       amount: family.ask,
-      note: "One wire into the LLC. Five beings. IP conversion sits in the same company.",
+      note: "One wire into the Delaware Inc. The whole family. IP conversion sits in the same company.",
     },
     {
       label: "Being-level check",
       amount: null,
-      note: "A partner may fund one being. The LLC is still one company. The provisional covers the family. Splitting the ask does not split the IP out of the house.",
+      note: "A partner may fund one being. The house is still one company. The provisional covers the family. Splitting the ask does not split the IP out of the house.",
     },
   ],
   blanks: [
@@ -32,7 +32,7 @@ export const INSTRUMENT = {
     "Discount — not printed.",
     "MFN — not printed.",
     "Pro-rata — not printed.",
-    "Board seat — not invented. Three people sit here. A board is a later conversation, not a slide.",
+    "Board seat — not invented. Four people sit here. A board is a later conversation, not a slide.",
     "Option pool — not invented. There is no 409A and no employees-with-grants fiction.",
     "Liquidation preference — SAFE converts. We will not dress a SAFE in participating preferred.",
   ],
@@ -40,15 +40,14 @@ export const INSTRUMENT = {
     `Field units named on the ledger — this-round modeled ${usd(family.fieldDollars)} at list. Not booked.`,
     "On-device engineering. Local-first. No cloud required to function.",
     "Clinical / caregiver humans in the loop. Not a chatbot disclaimer.",
-    "USPTO provisional TCAP-2026-001 converted toward non-provisional. Conversion is in the use of funds.",
-    "Runway for the LLC that holds the rest.",
+    "The family USPTO provisional converted toward non-provisional. Conversion is in the use of funds.",
+    "Runway for the company that holds the rest.",
   ],
   theyDoNotBuy: [
     "A granted patent. Provisional is pending.",
     "NVIDIA capital. Inception is membership.",
     "Booked revenue. None has been collected.",
     "A facility rate for a being that sits in the house.",
-    "Sierra, Seraphina, Eruptor, the Endo-Twins, or the Addiction Division as valued TAM. Named. Not valued.",
     "A percent of SOM. Ask is the round, not 2% of a five-year unit story.",
   ],
   conversion: {
@@ -62,8 +61,8 @@ export const INSTRUMENT = {
 } as const;
 
 export const TERMS_LAW = [
-  "One Wyoming LLC. Five beings. IP sits in the company, not in a founder’s pocket.",
+  "One Delaware Inc. 107 beings and 18 tools, every one counted. IP sits in the company, not in a founder’s pocket.",
   "The paper is a SAFE. The blanks stay blank until they are signed.",
   "Ask is dollars for this round. It is not a cap, not a percent of SOM, and not a multiple of revenue that does not exist.",
-  "A being-level check still lands in the same LLC. The family provisional does not split.",
+  "A being-level check still lands in the same company. The family provisional does not split.",
 ] as const;

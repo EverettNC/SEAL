@@ -106,7 +106,7 @@ export function Shell({ children }: { children: ReactNode }) {
       <div data-desk-page>{children}</div>
       <footer className="no-print border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-faint md:flex-row md:items-center md:justify-between md:px-6">
-          <p>The Christman AI Project LLC · Wyoming · operating as Luma Cognify AI</p>
+          <p>The Christman AI Project and Robotics Division Inc · Delaware · The Christman AI Project, Wyoming LLC, operating as Luma Cognify AI</p>
           <p>Burden is not TAM. Provisional is pending. Inception is membership. No revenue is printed.</p>
         </div>
       </footer>

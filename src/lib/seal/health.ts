@@ -10,7 +10,7 @@ export const HEALTH_LAW = [
   "Inception is membership. Not a grant. Not a GPU. Not an investment.",
   "We do not run on a named NVIDIA SKU in the field today. That is the conversation.",
   "The 2:32am house is the clinical environment we will speak. Not the OR. Not the scanner.",
-  "OpenSmell is in development. It is not in the 50-home count.",
+  "OpenSmell is open source and complete; its sensor is a device each family buys. It is not in the 50-home count.",
   "FDA, SaMD clearance, IRB, RCT — absent. Named. Not invented.",
   "MONAI, Clara imaging, BioNeMo, a hospital OS — wrong door.",
   "This room does not ask for a check.",
@@ -56,7 +56,7 @@ export const HER_LANGUAGE: {
   },
   {
     her: "Physical AI across medtech",
-    us: "OpenSmell VOC at the bedside is the physical-AI conversation. In development. Designed into AlphaWolf. Not a shipped SKU.",
+    us: "OpenSmell VOC at the bedside is the physical-AI conversation. Open source and complete; the sensor is bought by the family. Designed into AlphaWolf. Not a SKU this round.",
   },
   {
     her: "Edge-to-cloud platforms",
@@ -78,7 +78,7 @@ export const HEALTH_LENS: Record<
   alphavox: {
     sits: "Homes and AAC clinics. First 200 boards.",
     deviceClass:
-      "Software-defined communication aid. Adaptive input. Offline TTS. Built by someone who was nonverbal until 6.",
+      "Software-defined communication aid. Adaptive input. Offline TTS. Built by someone who was nonverbal until five.",
     nvidiaDoor:
       "On-device inference. A board that still speaks when connectivity drops. Edge, not a cloud voice API.",
     notClaim: "FDA clearance. Reimbursement codes. 200 boards already shipped.",
@@ -105,7 +105,7 @@ export const HEALTH_LENS: Record<
       "The silicon that makes the family possible. Local 32B-class. Named as a buy or a partner — not as a GPU grant in the bank.",
     notClaim: "Production IDE. Paying studios. Copilot. A seated NVIDIA SKU.",
   },
-  giuseppe: {
+  giovanni: {
     sits: "Homes. Company, not a medical device.",
     deviceClass: "Adaptive companion. Five mood states. Confirmation before action.",
     nvidiaDoor: "Not this room. We will not upsell company into a health claim to make the meeting easier.",
@@ -160,7 +160,7 @@ export const SHE_WILL_ASK: {
     id: "device",
     ask: "Are you a medical device company.",
     answer:
-      "AlphaVox is a communication aid until we make a clinical claim. AlphaWolf and Inferno invite SaMD if we cross the line. Giuseppe is company, not a device. This round does not buy FDA. The risk is named in the vault as absent.",
+      "AlphaVox is a communication aid until we make a clinical claim. AlphaWolf and Inferno invite SaMD if we cross the line. Giovanni Skyrider is company, not a device. This round does not buy FDA. The risk is named in the vault as absent.",
   },
   {
     id: "silicon",
@@ -178,11 +178,11 @@ export const SHE_WILL_ASK: {
     id: "physical",
     ask: "Where is the physical device.",
     answer:
-      "The boards, the homes, the seats. OpenSmell is VOC hardware in development — AlphaWolf is designed to take the feed; it is not in the 50-home SKU. Jetson, IGX, Holoscan are conversations. They are not demos we will fake.",
+      "The boards, the homes, the seats. OpenSmell is open source and complete; its VOC sensor is bought by the family — AlphaWolf is designed to take the feed; it is not in the 50-home SKU. Jetson, IGX, Holoscan are conversations. They are not demos we will fake.",
   },
   {
     id: "why-you",
-    ask: "Why should Healthcare Partner Development sit with a seed LLC in Ohio.",
+    ask: "Why should Healthcare Partner Development sit with a seed company in Ohio.",
     answer:
       "Because the deployment site GTC language still underserves is the home. Digital health agents that have to work when the tower dies. Software-defined care that is not an OR. That is our room. Three people. No revenue. Provisional pending. All of that is on the vault. None of it is hidden to make the meeting prettier.",
   },
@@ -196,5 +196,5 @@ export const SHE_WILL_ASK: {
 
 export const REPLY = {
   line: "The reply is: we are in Inception. The health beings sit in the house, not the OR. We need the next NVIDIA Health door named. We will not dress membership as capital.",
-  sign: "Everett Christman · The Christman AI Project LLC · contact@thechristmanaiproject.com",
+  sign: "Everett Christman, CEO · The Christman AI Project and Robotics Division Inc · contact@thechristmanaiproject.com",
 } as const;

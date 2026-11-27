@@ -5,7 +5,7 @@ import appCss from "../styles.css?url";
 
 const APP_NAME = "SEAL";
 const APP_DESCRIPTION =
-  "The closing agent for The Christman AI Project LLC. Five beings. Sourced math. One close at a time.";
+  "The closing agent for The Christman AI Project and Robotics Division Inc. 107 beings and 18 tools, every one counted. Sourced math. One close at a time.";
 
 export const Route = createRootRoute({
   head: () => ({

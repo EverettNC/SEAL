@@ -5,14 +5,14 @@ import { BEINGS, beingById, HAIRCUT } from "@/lib/seal/catalog";
 import { usd, pct, people } from "@/lib/seal/format";
 import { HOUSE } from "@/lib/seal/house";
 import { SOURCES } from "@/lib/seal/sources";
-import { familyUseOfFunds, value, valueAll } from "@/lib/seal/valuation";
+import { familyUseOfFunds, familyValue, value } from "@/lib/seal/valuation";
 
 export const Route = createFileRoute("/math")({ component: MathPage });
 
 function MathPage() {
   const wolf = beingById("alphawolf")!;
   const wv = value(wolf);
-  const family = valueAll(BEINGS);
+  const family = familyValue(BEINGS);
   const funds = familyUseOfFunds(BEINGS);
 
   return (
@@ -36,7 +36,7 @@ function MathPage() {
           × price — not booked. SOM {usd(family.som)} is five-year reachable. Attack the units.
         </p>
         <dl className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
-          <Stat k="TAM" v={usd(family.tam)} hint={`${pct(1 - HAIRCUT)} off sourced headlines`} />
+          <Stat k="TAM" v={usd(family.tam)} hint={`${pct(1 - HAIRCUT)} off sourced headlines, the divisions included`} />
           <Stat k="SAM" v={usd(family.sam)} hint="Channel we can sell into" />
           <Stat k="SOM" v={usd(family.som)} hint="Units × price" />
           <Stat k="Ask" v={usd(family.ask)} hint={`Field modeled ${usd(family.fieldDollars)}`} />

@@ -98,7 +98,7 @@ export function formatDeskCopy(url: string, blocks: DeskBlock[]): string {
     .join("\n");
 
   return [
-    "SEAL · The Christman AI Project LLC",
+    "SEAL · The Christman AI Project and Robotics Division Inc",
     kicker && kicker.length < 80 ? kicker : null,
     title,
     url,

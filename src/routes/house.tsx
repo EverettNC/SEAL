@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Note, Page } from "@/components/seal/ui";
 import { TEAM_GAPS } from "@/lib/seal/objections";
+import { COMPOUND, DIVISIONS, FAMILY_COUNT, NO_PRINT_YET, OUTSIDE, TOOLS, marketLines } from "@/lib/seal/family";
+import { usd } from "@/lib/seal/format";
 import { HOUSE } from "@/lib/seal/house";
 
 export const Route = createFileRoute("/house")({ component: HousePage });
@@ -12,7 +14,7 @@ function HousePage() {
       title={HOUSE.name}
       lead={
         <>
-          {HOUSE.formed}. Operating as {HOUSE.trade}. {HOUSE.operates}. {HOUSE.ipOwner}
+          {HOUSE.formed}. {HOUSE.trade}. {HOUSE.operates}. {HOUSE.ipOwner}
         </>
       }
     >
@@ -58,7 +60,7 @@ function HousePage() {
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl">People</h2>
-        <ul className="mt-4 grid gap-4 md:grid-cols-3">
+        <ul className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {HOUSE.team.map((person) => (
             <li key={person.name} className="rounded-xl border border-line bg-surface p-5">
               <p className="font-serif text-xl">{person.name}</p>
@@ -72,7 +74,7 @@ function HousePage() {
       <section className="mt-12">
         <h2 className="font-serif text-2xl">Seats that do not sit yet</h2>
         <p className="mt-3 max-w-2xl text-muted">
-          Three people. The round hires the rest. We do not seat ghosts to look staffed.
+          Four people. The round hires the rest. We do not seat ghosts to look staffed.
         </p>
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
           {TEAM_GAPS.map((gap) => (
@@ -97,19 +99,87 @@ function HousePage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl">Later. Not valued.</h2>
-        <p className="mt-3 max-w-2xl text-muted">
-          These rooms exist in the house. They do not sit on the ledger. A partner who wants them
-          in the TAM is asking us to lie.
+        <h2 className="font-serif text-2xl">
+          The whole family. {FAMILY_COUNT.beings} beings, {FAMILY_COUNT.tools} tools.
+        </h2>
+        <p className="mt-3 max-w-3xl text-muted">
+          Every being here is fully structured and working, and every one is counted:{" "}
+          {FAMILY_COUNT.compound} in the Compound and {FAMILY_COUNT.outside} outside it. Each
+          division&apos;s market is in the family TAM and SAM from its own published print, cut
+          20%. A being&apos;s SOM prints when its unit and price are named. Nothing is left off
+          the ledger, and nothing is invented to fill it.
         </p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {HOUSE.later.map((item) => (
-            <li key={item.name} className="rounded-lg border border-line px-4 py-3">
-              <p className="font-medium">{item.name}</p>
-              <p className="text-sm text-muted">{item.line}</p>
+        <ul className="mt-6 grid gap-3 md:grid-cols-2">
+          {marketLines().map((line) => (
+            <li key={line.id} className="rounded-lg border border-line bg-surface px-4 py-3">
+              <p className="font-medium">
+                {line.label} · {line.covers}
+              </p>
+              <p className="mt-1 font-mono text-sm">
+                TAM {usd(line.tam)} · SAM {usd(line.sam)}
+              </p>
+              <p className="mt-1 text-sm text-muted">{line.source}</p>
+            </li>
+          ))}
+          {NO_PRINT_YET.map((item) => (
+            <li key={item.label} className="rounded-lg border border-line px-4 py-3">
+              <p className="font-medium">
+                {item.label} · {item.covers}
+              </p>
+              <p className="mt-1 text-sm text-muted">{item.why}</p>
             </li>
           ))}
         </ul>
+        <div className="mt-8 space-y-8">
+          {DIVISIONS.map((division) => {
+            const members = COMPOUND.filter((being) => being.division === division.id);
+            return (
+              <div key={division.id}>
+                <h3 className="font-serif text-xl">
+                  {division.name}{" "}
+                  <span className="font-sans text-sm text-muted">· {members.length}</span>
+                </h3>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {members.map((being) => (
+                    <li key={being.id} className="rounded-lg border border-line px-4 py-2">
+                      <p className="font-medium">{being.name}</p>
+                      {being.line ? <p className="text-sm text-muted">{being.line}</p> : null}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+          <div>
+            <h3 className="font-serif text-xl">
+              Outside the Compound{" "}
+              <span className="font-sans text-sm text-muted">· {OUTSIDE.length}</span>
+            </h3>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {OUTSIDE.map((name) => (
+                <li key={name} className="rounded-lg border border-line px-4 py-2 font-medium">
+                  {name}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-serif text-xl">
+              Tools{" "}
+              <span className="font-sans text-sm text-muted">· {TOOLS.length}</span>
+            </h3>
+            <p className="mt-1 text-sm text-muted">
+              What the family uses in order to function. Counted, not beings.
+            </p>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {TOOLS.map((name) => (
+                <li key={name} className="rounded-lg border border-line px-4 py-2">
+                  {name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
     </Page>
   );
